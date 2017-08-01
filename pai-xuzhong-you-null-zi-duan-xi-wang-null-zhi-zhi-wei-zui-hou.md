@@ -32,5 +32,9 @@ coalesce\(\)函数  如果所有参数都为null ，则返回null。 否则返�
 
 select \* from nums order by num is null, num asc;
 
+###方式五， if(condition, trueResult, falseResult)
+在mysql中 0代表false， 大于0的数值代表true
+select * from nums order by if(num is num, 1, 0), num
+
 
 

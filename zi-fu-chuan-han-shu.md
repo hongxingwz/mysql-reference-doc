@@ -1,4 +1,16 @@
-# 长度
+##UPPER和UCASE
+返回字符串str，根据当前字符集映射(缺省是ISO-8859-1 Latin1)把所有的字符改变成大写。该函数对多字节是可靠的。
+
+##LOWER和LCASE
+返回字符串str，根据当前字符集映射(缺省是ISO-8859-1 Latin1)把所有的字符改变为小写。该函数对多字节是可靠的。
+## 重复 
+**REPEAT(str, count)**
+返回由重复count次的字符串str组成的一个字符串。如果count <= 0，返回一个空字符串。如果str或count是NULL，返回NULL
+## 反转
+**REVERSE(str)**
+返回颠倒字符顺序的字符串str
+
+## 长度
 **char\_length\(\)**
 字符长度
 如果参数为null， 返回null
@@ -6,7 +18,7 @@
 字节长度
 如果参数为null，返回null
 
-# 去除空格
+## 去除空格
 LTRIM(str) 去除左边的空格
 RTRIM(str) 去除右边的空格
 TRIM(str) 去除左右两边的空格

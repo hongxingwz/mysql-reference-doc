@@ -1,0 +1,1 @@
+case 1 when 1 then "b" else " c" end
