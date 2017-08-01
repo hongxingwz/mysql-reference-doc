@@ -11,3 +11,14 @@ HOUR(date)        日期中的小时
 MINUTE(date)       日期中的分钟
 SECOND(date)        日期中的秒
 
+
+----
+##当前的日间
+NOW()
+SYSDATE()
+CURRENT_TIMESTAMP()
+
+##日期格式化
+DATE_FORMAT(date)
+
+经常用的 DATE_FORMAT(now(), "%Y-%m-%d %H:%i:s"
