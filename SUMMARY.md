@@ -7,4 +7,6 @@
 * [字符串函数](zi-fu-chuan-han-shu.md)
 * [控制语句](kong-zhi-yu-ju.md)
 * [外键约束](wai-jian-yue-shu.md)
+* [Insert](insert.md)
+* [总：取得前一次MYSQL操作影响的记录行数](qu-de-qian-yi-ci-mysql-cao-zuo-ying-xiang-de-ji-lu-xing-shu.md)
 
