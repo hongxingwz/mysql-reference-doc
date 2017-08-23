@@ -14,4 +14,5 @@
 * [3.3 Creating and Using a Database](31-creating-and-using-a-database.md)
 * [3.3.1 Creating and Selecting a Database](331-creating-and-selecting-a-database.md)
 * [3.3.2 Creating a Table](332-creating-a-table.md)
+* [3.3.3 Loading Data into a Table](333-jia-zai-shu-ju-dao-biao-zhong.md)
 
