@@ -16,4 +16,6 @@
 * [3.3.2 Creating a Table](332-creating-a-table.md)
 * [3.3.3 Loading Data into a Table](333-jia-zai-shu-ju-dao-biao-zhong.md)
 * [3.3.4 Retrieving Information from a Table](334-retrieving-information-from-a-table.md)
+* [3.3.4.1 Selecting All Data](3341-selecting-all-data.md)
+* 3.3.4.2 Selecting Particular Rows
 
