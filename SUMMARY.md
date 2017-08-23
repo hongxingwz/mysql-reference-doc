@@ -18,4 +18,5 @@
 * [3.3.4 Retrieving Information from a Table](334-retrieving-information-from-a-table.md)
 * [3.3.4.1 Selecting All Data](3341-selecting-all-data.md)
 * [3.3.4.2 Selecting Particular Rows](3342-selecting-particular-rows.md)
+* [3.3.4.3 Selecting Particular Columns](3343-xuan-ze-zhi-ding-de-lie.md)
 
