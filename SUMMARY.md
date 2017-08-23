@@ -12,4 +12,5 @@
 * [3.1 Connecting to and Disconnecting from the Server](31-connecting-to-and-disconnecting-from-the-server.md)
 * [3.2 Entering Queries](32-entering-queries.md)
 * [3.3 Creating and Using a Database](31-creating-and-using-a-database.md)
+* [3.3.1 Creating and Selecting a Database](331-creating-and-selecting-a-database.md)
 
