@@ -9,4 +9,6 @@
 * [外键约束](wai-jian-yue-shu.md)
 * [Insert](insert.md)
 * [总：取得前一次MYSQL操作影响的记录行数](qu-de-qian-yi-ci-mysql-cao-zuo-ying-xiang-de-ji-lu-xing-shu.md)
+* [3.1 Connecting to and Disconnecting from the Server](31-connecting-to-and-disconnecting-from-the-server.md)
+* [3.2 Entering Queries](32-entering-queries.md)
 
