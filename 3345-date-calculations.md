@@ -103,5 +103,27 @@ mysql> select name, birth from pet where month(birth) = 5;
 +-------+------------+
 ```
 
+这里有一个小小的问题当目前月是12月。你不能仅仅把月份加1\(12月\)然后查找在13月份出生的动物，因为没有这个月。相反，你应该查找在1月份出生的动物。
+
+你可以写一个查询不用关心当前月份是什么，因此你不用使用指定的月份了。DATE\_ADD\(\)使指定的日期增加固定的间隔。如果你使CURDATE\(\)增加固定的一个月，然后使用MONTH\(\)提取一个月，好么产生的月份就是你要找的出生日期:
+
+```
+mysql> SELECT name, birth from pet
+    -> where month(birth) = month(date_add(curdate(), interval 1 month));
+```
+
+另一种完成同样任务的作法是把当前月用取模函数\(MOD\)包裹之后如果当前是12月取模之后的值是0在加1：
+
+```
+mysql> SELECT name, birth from pet where month(birth) = mod(month(curdate()), 12) + 1;
++--------+------------+
+| name   | birth      |
++--------+------------+
+| Chirpy | 1998-09-11 |
++--------+------------+
+```
+
+
+
 
 
