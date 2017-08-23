@@ -19,13 +19,20 @@ SECOND\(date\)        日期中的秒
 
 NOW\(\)  
 SYSDATE\(\)  
-CURRENT\_TIMESTAMP\(\)
-current_date
-
+CURRENT\_TIMESTAMP\(\)  
+current\_date
 
 ## 日期格式化
 
 DATE\_FORMAT\(date\)
 
 经常用的 DATE\_FORMAT\(now\(\), "%Y-%m-%d %H:%i:s"
+
+
+
+timestampdiff
+
+
+
+
 

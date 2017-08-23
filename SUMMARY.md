@@ -20,4 +20,5 @@
 * [3.3.4.2 Selecting Particular Rows](3342-selecting-particular-rows.md)
 * [3.3.4.3 Selecting Particular Columns](3343-xuan-ze-zhi-ding-de-lie.md)
 * [3.3.4.4 Sorting Rows](3344-soring-rows.md)
+* [3.3.4.5 Date Calculations](3345-date-calculations.md)
 
