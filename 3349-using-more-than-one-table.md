@@ -54,3 +54,8 @@ mysql> select pet.name, timestampdiff(year, birth, date) as age,
 
 这有几点需要注意的事情在查询中:
 
+* FROM语句连接了两个表因为查询需要从这两张表中拉取信息
+* 当将多个表结合时，你需要指定一个表中的记录怎么才能与其他表中的记录匹配。这很容易因为他们都有一个name属性
+
+
+
