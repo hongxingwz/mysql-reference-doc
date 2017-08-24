@@ -22,4 +22,6 @@
 * [3.3.4.4 Sorting Rows](3344-soring-rows.md)
 * [3.3.4.5 Date Calculations](3345-date-calculations.md)
 * [3.3.4.6 Working with NULL Values](3346-working-with-null-values.md)
+* [3.3.4.7 Pattern Matching](3347-pattern-matching.md)
+* [3.3.4.8 Counting Rows](3348-counting-rows.md)
 

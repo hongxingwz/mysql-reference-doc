@@ -28,11 +28,7 @@ DATE\_FORMAT\(date\)
 
 经常用的 DATE\_FORMAT\(now\(\), "%Y-%m-%d %H:%i:s"
 
-
-
 timestampdiff
 
-
-
-
+date\_add
 

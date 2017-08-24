@@ -125,5 +125,3 @@ mysql> SELECT name, birth from pet where month(birth) = mod(month(curdate()), 12
 
 
 
-
-
