@@ -25,4 +25,5 @@
 * [3.3.4.7 Pattern Matching](3347-pattern-matching.md)
 * [3.3.4.8 Counting Rows](3348-counting-rows.md)
 * [3.3.4.9 Using More Than one Table](3349-using-more-than-one-table.md)
+* [3.4 Getting Information About Databases and Tables](34-getting-information-about-databases-and-tables.md)
 
