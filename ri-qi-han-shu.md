@@ -32,3 +32,24 @@ timestampdiff
 
 date\_add
 
+
+
+# 天坑：
+
+如果对于datetime类形的列，如果你输入"2017-08-24"，mysql 会将其视为"2017-08-24 00:00:00"。所以当你在使用下面的sql查询时
+
+```
+select * from table where createDate <= "2017-08-24"
+```
+
+会查询不到日期为2017-08-24 17:20:46
+
+转换思路，使用下面的SQL
+
+```
+select * from table where DATE(createDate) <= "2017-08-24"
+select * from table where DATE(createDate) < "2017-08-25" #感觉这个最好 效率最高
+```
+
+
+
