@@ -120,5 +120,18 @@ mysql> select owner, count(*) from pet;
 ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'menagerie.pet.owner'; this is incompatible with sql_mode=only_full_group_by
 ```
 
+* 如果ONLY\_FULL\_GROUP\_BY SQL没有被激活，那么查询会被处理:所有的行作为单一的组，但从每个name列选择的值是不确定的。服务可以从任何行中选择值:
+
+```
+mysql> select owner, count(*) from pet;
++--------+----------+
+| owner  | count(*) |
++--------+----------+
+| Harold |        9 |
++--------+----------+
+```
+
+查看12.19.3章，"MySQL Handling of GROUP BY"。查看Section 12.19.1, "Aggregate\(GROUP BY\) Function Descriptions"来获取COUNT\(expr\)的信息和相关的优化。
+
 
 
