@@ -115,5 +115,10 @@ mysql> select species, sex, count(*) from pet
 
 * 如果ONLY\_FULL\_GROUP\_BY SQL模式被激活，一个错误将会发生
 
+```
+mysql> select owner, count(*) from pet;
+ERROR 1140 (42000): In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'menagerie.pet.owner'; this is incompatible with sql_mode=only_full_group_by
+```
+
 
 
