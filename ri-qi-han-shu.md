@@ -30,9 +30,9 @@ DATE\_FORMAT\(date\)
 
 timestampdiff
 
+TIMESTAMPADD
+
 date\_add
-
-
 
 # 天坑：
 
