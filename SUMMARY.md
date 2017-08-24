@@ -9,6 +9,7 @@
 * [外键约束](wai-jian-yue-shu.md)
 * [Insert](insert.md)
 * [总：取得前一次MYSQL操作影响的记录行数](qu-de-qian-yi-ci-mysql-cao-zuo-ying-xiang-de-ji-lu-xing-shu.md)
+* [总：联合主键](zong-ff1a-lian-he-zhu-jian.md)
 * [3.1 Connecting to and Disconnecting from the Server](31-connecting-to-and-disconnecting-from-the-server.md)
 * [3.2 Entering Queries](32-entering-queries.md)
 * [3.3 Creating and Using a Database](31-creating-and-using-a-database.md)
@@ -27,4 +28,5 @@
 * [3.3.4.9 Using More Than one Table](3349-using-more-than-one-table.md)
 * [3.4 Getting Information About Databases and Tables](34-getting-information-about-databases-and-tables.md)
 * [3.5 Using mysql in Batch Model](35.md)
+* [3.6 Examples of Common Queries](36-examples-of-common-queries.md)
 
