@@ -45,4 +45,5 @@
 * [11.2 Numberic Types](112-numberic-types.md)
 * [11.2.1 Integer Types\(Exact Value\) - INTEGER, INT, SMALLINT, TINYINT, MEDIUMINT, BIGINT](1121-integer-typesexact-value-integer-int-smallint-tinyint-mediumint-bigint.md)
 * [11.2.2 Fixed-Point Types\(Exact Value\) - DECIMAL, NUMERIC](1111-fixed-point-typesexact-value-decimal-numeric.md)
+* [11.2.3 Floating-Point Types\(Approximate Value\) -FLOAT, DOUBLE](1123-floating-point-typesapproximate-value-float-double.md)
 
