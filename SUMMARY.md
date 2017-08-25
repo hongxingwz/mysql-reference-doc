@@ -42,4 +42,6 @@
 * 3.7 Using MySQL with Apache
 * [9.1 Literal Values](91-literal-values.md)
 * [9.1.1 String Literals](911-string-literals.md)
+* [11.2 Numberic Types](112-numberic-types.md)
+* [11.2.1 Integer Types\(Exact Value\) - INTEGER, INT, SMALLINT, TINYINT, MEDIUMINT, BIGINT](1121-integer-typesexact-value-integer-int-smallint-tinyint-mediumint-bigint.md)
 

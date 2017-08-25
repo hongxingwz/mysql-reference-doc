@@ -1,0 +1,4 @@
+# 11.2.1 Integer Types\(Exact Value\) - INTEGER, INT, SMALLINT, TINYINT, MEDIUMINT, BIGINT
+
+
+
