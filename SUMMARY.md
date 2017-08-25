@@ -10,6 +10,7 @@
 * [Insert](insert.md)
 * [总：取得前一次MYSQL操作影响的记录行数](qu-de-qian-yi-ci-mysql-cao-zuo-ying-xiang-de-ji-lu-xing-shu.md)
 * [总：联合主键](zong-ff1a-lian-he-zhu-jian.md)
+* [总: last\_insert\_id\(\)](603b3a-last-insert-id.md)
 * [3.1 Connecting to and Disconnecting from the Server](31-connecting-to-and-disconnecting-from-the-server.md)
 * [3.2 Entering Queries](32-entering-queries.md)
 * [3.3 Creating and Using a Database](31-creating-and-using-a-database.md)
@@ -36,4 +37,5 @@
 * [3.6.5 Using User-Defined Variables](365-using-user-defined-variables.md)
 * [\* 3.6.6 Using Foreign Keys](366-using-foreign-keys.md)
 * [3.6.7 Search on Two Keys](367-search-on-two-keys.md)
+* [\* 3.6.8 Calculating Visits Per Day](calculating-visits-per-day.md)
 
