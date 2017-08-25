@@ -29,4 +29,8 @@
 * [3.4 Getting Information About Databases and Tables](34-getting-information-about-databases-and-tables.md)
 * [3.5 Using mysql in Batch Model](35.md)
 * [3.6 Examples of Common Queries](36-examples-of-common-queries.md)
+* [3.6.1 The Maximum Value for a Column](361-the-maximum-value-for-a-column.md)
+* [3.6.2 The Row Holding the Maximum of a Certain Column](362-the-row-holding-the-maximum-of-a-certain-column.md)
+* [3.6.3 Maximum of Column per Group](363-maximum-of-column-per-group.md)
+* [3.6.4 The Rows Holding the Group-wise Maximum of a Certain Column](364.md)
 
