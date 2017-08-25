@@ -38,6 +38,8 @@ select * from animals;
 
 你可以提取最近生成的AUTO\_INCREMENT值通过LAST\_INSERT\_ID() SQL函数或 mysql\_insert\_id() C API函数。这些函数都是连接特定的，因此他们的返回值不受其他也执行了插入操作的连接影响。
 
+使用最小的整数数据类型对于AUTO_INCREMENT列就已经足够。当该列到达数据类型最大的限制时，下次尝试生成自增值会失败。使用UNSIGNED属性如果可以的话来生成更大一点的范围。例如，你使用TINYINT，最大可能到达的值是127。对于TINYINT UNSIGNED,最小值可能是255 查看 Section 11.2.1, “Integer Types (Exact Value) - INTEGER, INT, SMALLINT, TINYINT, MEDIUMINT, BIGINT” 获取各种整形类型的范围
+
 ```
 mysql> insert into animals values (0, "a");
 mysql> select * from animals;
