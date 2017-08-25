@@ -33,4 +33,7 @@
 * [3.6.2 The Row Holding the Maximum of a Certain Column](362-the-row-holding-the-maximum-of-a-certain-column.md)
 * [3.6.3 Maximum of Column per Group](363-maximum-of-column-per-group.md)
 * [3.6.4 The Rows Holding the Group-wise Maximum of a Certain Column](364.md)
+* [3.6.5 Using User-Defined Variables](365-using-user-defined-variables.md)
+* [\* 3.6.6 Using Foreign Keys](366-using-foreign-keys.md)
+* [3.6.7 Search on Two Keys](367-search-on-two-keys.md)
 
