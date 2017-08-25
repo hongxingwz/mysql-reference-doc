@@ -66,5 +66,13 @@ mysql> select * from animals;
 mysql> alter table animals AUTO_INCREMENT=8;
 ```
 
+## INNODB Notes
+
+获取关于AUTO\_INCREMENT在InnoDB中特殊的使用事项，查看Section 14.8.1.5, “AUTO\_INCREMENT Handling in InnoDB”.
+
+## MyISAM Notes
+
+* 对于MyISAM表，你可以在联合索引的第二列指定AUTO\_INCREMENT。在这种情况下对于AUTO\_INCREMENT列生成的值是MAX(auto\_increment\_column) + 1 WHERE  prefix = given-prefix.这在你把数据放入排序组是非常有用的。
+
 
 
