@@ -72,7 +72,41 @@ mysql> alter table animals AUTO_INCREMENT=8;
 
 ## MyISAM Notes
 
-* 对于MyISAM表，你可以在联合索引的第二列指定AUTO\_INCREMENT。在这种情况下对于AUTO\_INCREMENT列生成的值是MAX(auto\_increment\_column) + 1 WHERE  prefix = given-prefix.这在你把数据放入排序组是非常有用的。
+* 对于MyISAM表，你可以在联合索引的第二列指定AUTO\_INCREMENT。在这种情况下对于AUTO\_INCREMENT列生成的值是MAX\(auto\_increment\_column\) + 1 WHERE  prefix = given-prefix.这在你把数据放入排序组是非常有用的。
+
+```
+mysql> CREATE TABLE animals (
+    ->     grp ENUM('fish','mammal','bird') NOT NULL,
+    ->     id MEDIUMINT NOT NULL AUTO_INCREMENT,
+    ->     name CHAR(30) NOT NULL,
+    ->     PRIMARY KEY (grp,id)
+    -> ) ENGINE=MyISAM;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> 
+mysql> INSERT INTO animals (grp,name) VALUES
+    ->     ('mammal','dog'),('mammal','cat'),
+    ->     ('bird','penguin'),('fish','lax'),('mammal','whale'),
+    ->     ('bird','ostrich');
+Query OK, 6 rows affected (0.00 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> select * from animals order by grp, id;
++--------+----+---------+
+| grp    | id | name    |
++--------+----+---------+
+| fish   |  1 | lax     |
+| mammal |  1 | dog     |
+| mammal |  2 | cat     |
+| mammal |  3 | whale   |
+| bird   |  1 | penguin |
+| bird   |  2 | ostrich |
++--------+----+---------+
+6 rows in set (0.00 sec)
+
+mysql> 
+
+```
 
 
 

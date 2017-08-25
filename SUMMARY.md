@@ -38,5 +38,6 @@
 * [\* 3.6.6 Using Foreign Keys](366-using-foreign-keys.md)
 * [3.6.7 Search on Two Keys](367-search-on-two-keys.md)
 * [\* 3.6.8 Calculating Visits Per Day](calculating-visits-per-day.md)
-* [3.6.9 使用AUTO\_INCREMENT](369-shi-yong-auto-increment.md)
+* [\* 3.6.9 使用AUTO\_INCREMENT](369-shi-yong-auto-increment.md)
+* 3.7 Using MySQL with Apache
 
