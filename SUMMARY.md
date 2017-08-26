@@ -49,4 +49,5 @@
 * [11.2.4 Bit-Value Type - BIT](1124-bit-value-type-bit.md)
 * [11.2.5 Numeric Type Attributes](1125-numeric-type-attributes.md)
 * [11.2.6 Out-of-Range and Overflow Handling](1126-out-of-range-and-overflow-handling.md)
+* [11.3 Date and Time Types](113-date-and-time-types.md)
 
