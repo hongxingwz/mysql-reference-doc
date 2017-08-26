@@ -40,5 +40,55 @@ mysql> select * from t1;
 +------+------+
 ```
 
-当strict SQL模式没有起用时，列赋值转换在裁剪时会以警告作报告在ALTER TABLE, LOAD DATA INFILE, UPDATE, 和多行INSERT语句。在strict mode，这些语句会失败，一些或所有的值会插入失败，取决于表是否开启了事物和其他一些因素。获取详细的信息，参阅5.1.8节 “Server SQL Modes” 
+当strict SQL模式没有起用时，列赋值转换在裁剪时会以警告作报告在ALTER TABLE, LOAD DATA INFILE, UPDATE, 和多行INSERT语句。在strict mode，这些语句会失败，一些或所有的值会插入失败，取决于表是否开启了事物和其他一些因素。获取详细的信息，参阅5.1.8节 “Server SQL Modes”
+
+在数值表达式执行期间溢出会返回一个错误。有符号BIGINT的最大值是9223372036854775807,因此下面的表达式将产生一个错误：
+
+```
+mysql> select 9223372036854775807 + 1;
+ERROR 1690 (22003): BIGINT value is out of range in '(9223372036854775807 + 1)'
+```
+
+为了使此运算执行，将该值转换为无符号的:
+
+```
+mysql> select cast(9223372036854775807 as unsigned) + 1;
++-------------------------------------------+
+| cast(9223372036854775807 as unsigned) + 1 |
++-------------------------------------------+
+|                       9223372036854775808 |
++-------------------------------------------+
+```
+
+是否溢出取决于操作数的范围，因此别一种处理方法是表达式使用精确的算术值，因为DECIMAL比整数有更大的范围：
+
+```
+mysql> select 9223372036854775807.0 + 1;
++---------------------------+
+| 9223372036854775807.0 + 1 |
++---------------------------+
+|     9223372036854775808.0 |
++---------------------------+
+```
+
+在整数值相减，如果一个是UNSIGNED,默认产生一个unsigend值。如果结果产生一个负数，将会返回一个错误：
+
+```
+mysql> select cast(0 as unsigned) - 1;
+ERROR 1690 (22003): BIGINT UNSIGNED value is out of range in '(cast(0 as unsigned) - 1)'
+```
+
+如果启用了NO\_UNSIGEND\_SUBTRACTION SQL模式，结果将会是负数：
+
+```
+mysql> SET sql_mode = 'NO_UNSIGNED_SUBTRACTION';
+mysql> SELECT CAST(0 AS UNSIGNED) -1;
++------------------------+
+| CAST(0 AS UNSIGNED) -1 |
++------------------------+
+|                     -1 |
++------------------------+
+```
+
+如果此种运算的结果用于更新一个UNSIGNED整数列，结果将裁剪为该列的最小值，或裁剪为0如果NO\_UNSIGNED\_SUBTRACTION启用。如果strict SQL模式启用，发生一个错误，列保持不变。
 
