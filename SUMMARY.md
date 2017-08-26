@@ -51,4 +51,6 @@
 * [11.2.6 Out-of-Range and Overflow Handling](1126-out-of-range-and-overflow-handling.md)
 * [11.3 Date and Time Types](113-date-and-time-types.md)
 * [11.3.1 The DATE, DATETIME, and TIMESTAMP Types](1131-the-date-datetime-and-timestamp-types.md)
+* [11.3.2 The TIME Type](1132-the-time-type.md)
+* [11.3.3 The YEAR Type](1133-the-year-type.md)
 
