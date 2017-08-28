@@ -53,4 +53,6 @@
 * [11.3.1 The DATE, DATETIME, and TIMESTAMP Types](1131-the-date-datetime-and-timestamp-types.md)
 * [11.3.2 The TIME Type](1132-the-time-type.md)
 * [11.3.3 The YEAR Type](1133-the-year-type.md)
+* [11.4 String Types](114-string-types.md)
+* [11.4.1 The CHAR and VARCHAR Types](1141-the-char-and-varchar-types.md)
 
