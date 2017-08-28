@@ -57,4 +57,5 @@
 * [11.4.1 The CHAR and VARCHAR Types](1141-the-char-and-varchar-types.md)
 * [11.4.2 The BINARY and VARBINARY Types](1142-the-binary-and-varbinary-types.md)
 * [\* 11.4.3 The BLOB and TEXT Types](1143-the-blob-and-text-types.md)
+* [11.4.4 The ENUM Type](1144-the-enum-type.md)
 
