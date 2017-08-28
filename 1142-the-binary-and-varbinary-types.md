@@ -1,0 +1,8 @@
+# 11.4.2 BINARY and VARBINARY Types
+
+BINARY和VARBINARY
+
+---
+
+
+

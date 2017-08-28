@@ -55,4 +55,5 @@
 * [11.3.3 The YEAR Type](1133-the-year-type.md)
 * [11.4 String Types](114-string-types.md)
 * [11.4.1 The CHAR and VARCHAR Types](1141-the-char-and-varchar-types.md)
+* [11.4.2 The BINARY and VARBINARY Types](1142-the-binary-and-varbinary-types.md)
 
