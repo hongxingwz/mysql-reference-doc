@@ -123,3 +123,47 @@ mysql> select * from shirts2;
 
 决定所有的可能性从一列值中，使用SHOW COLUMNS FROM tbl\_name LIKE 'enum\_col'在输出的Type列解析ENUM的定义
 
+## Empty or NULL Enumeration Values
+
+枚举值也可以是空字符串\(''\)或NULL在必要的情况下：
+
+* 如果你插入一个无效的值到ENUM列\(字符串没有出现在允许值的列表中\)，空字符串被插入而不是出现一个指定的错误。这个字符串可以通过索引来与“普通”的字符串区分开因为在实际上这个字符串具有数值为0的索引。参阅“Index Values for Enumeration Literals”来获取关于枚举值更详细的信息。
+
+在严格SQL模式下，尝试插入一个无效的ENUM值会返回一个错误。
+
+* 如果ENUM列被声明为允许为NULL，NULL值对于该列就是有效的值，并且默认值为NULL。如果ENUM列被声明为NOT NULL，默认值的是允许值的第一个。
+
+## Enumeration Sorting
+
+**ENUM**值的存储基于他们的索引值，索引值取决于他们在枚举成员列表中的顺序在列定义。例如,排序'b'在’a'之前对于ENUM\('b', 'a'\)。空字符串在非空字符串之前，NULL值在所有枚举成员之前。
+
+阻止意外的结果当使用ORDER BY语句在ENUM列时，你要下面的技巧：
+
+* 指定ENUM列以字母的顺序排序
+* 确保以词法上排序而不是以索引值排序通过ORDER BY CAST\(col AS CHAR\) 或 ORDER BY CONCAT\(col\)
+
+## Enumeration Limitations
+
+对于枚举值不能是表达式，即使是执行之后是一个字符串值。  
+例如，这个创建表CREATE TABLE语句不会工作因为CONCAT函数不能用来构造一个枚举值：
+
+```
+mysql> CREATE TABLE sizes(
+    -> size ENUM('small', CONCAT('med', 'ium'), 'large')
+    -> );
+```
+
+你也不可以使用用户变量作为枚举值。下面的语句也不会工作：
+
+```
+mysql> create table sizes(
+    -> size enum('small', @mysize, 'large')
+    -> );
+```
+
+我们强烈建议你不要使用数值作为枚举值，因为他不会存储超过appropriate TINYINT 或 SMALLINT类型，并且容易把字符串与索引混合起来如果你不正确的包裹ENUM值。
+
+如果你使用一个数字作为枚举值，永远把值用字符串括起来。如果括号缺失了，数值会作为索引。参阅"Handling of Enumeration Literals"来查看用引号括起来的数字可能被错误的当数值索引来使用。
+
+在定义中重复的值会生成一个警告，如果是严格SQL模式启用的话会生成一个错误。
+
