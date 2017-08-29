@@ -34,5 +34,47 @@ mysql> SELECT set_col+0 FROM tbl_name;
 | 'c' | 4 | 0100 |
 | 'd' | 8 | 1000 |
 
-如果你把一个值9赋予此列，其二进制值是1001，因此第1和第4个SET值‘a'和'd'被选择然后回返的结果是'a,d'.
+如果你把一个值9赋予此列，其二进制值是1001，因此第1和第4个SET值‘a'和'd'被选择然后回返的结果是'a,d'。
+
+对于一个包含超过一个SET元素的值，无论在你插入时是以任何顺序，无论值在list中出现了多少次。当你最后提取值的时候，每个值仅出现一次，元素出现的顺序是根据创建表时指定的顺序出现，假定，列被指定为SET\('a','b','c','d'\):
+
+```
+mysql> create table myset (col set('a', 'b', 'c', 'd'));
+Query OK, 0 rows affected (0.02 sec)
+```
+
+如果你插入值'a,d', 'd,a', 'a,d,d', 'a,d,a' 和 ’d,a,d':
+
+```
+
+mysql> insert into myset (col) values 
+    -> ('a,d'), ('d,a'), ('a,d,a'), ('a,d,d'), ('d,a,d');
+Query OK, 5 rows affected (0.00 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+```
+
+所有值作为'a,d'出现当提取的时候
+
+```
+
+mysql> select * from myset;
++------+
+| col  |
++------+
+| a,d  |
+| a,d  |
+| a,d  |
+| a,d  |
+| a,d  |
++------+
+5 rows in set (0.00 sec)
+```
+
+如果你设置了一个SET列不支持的值，value值会被忽略然后产生一个警告：
+
+```
+
+```
+
+
 
