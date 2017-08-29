@@ -46,7 +46,6 @@ Query OK, 0 rows affected (0.02 sec)
 如果你插入值'a,d', 'd,a', 'a,d,d', 'a,d,a' 和 ’d,a,d':
 
 ```
-
 mysql> insert into myset (col) values 
     -> ('a,d'), ('d,a'), ('a,d,a'), ('a,d,d'), ('d,a,d');
 Query OK, 5 rows affected (0.00 sec)
@@ -56,7 +55,6 @@ Records: 5  Duplicates: 0  Warnings: 0
 所有值作为'a,d'出现当提取的时候
 
 ```
-
 mysql> select * from myset;
 +------+
 | col  |
@@ -73,8 +71,32 @@ mysql> select * from myset;
 如果你设置了一个SET列不支持的值，value值会被忽略然后产生一个警告：
 
 ```
+mysql> insert into myset(col) values ('a,d,d,s');
+Query OK, 1 row affected, 1 warning (0.00 sec)
 
+mysql> show warnings;
++---------+------+------------------------------------------+
+| Level   | Code | Message                                  |
++---------+------+------------------------------------------+
+| Warning | 1265 | Data truncated for column 'col' at row 1 |
++---------+------+------------------------------------------+
+
+mysql> select col from myset;
++------+
+| col  |
++------+
+| a,d  |
+| a,d  |
+| a,d  |
+| a,d  |
++------+
 ```
+
+如果严格模式启用了，尝试插入无效的结果值将产生一个错误。
+
+SET值以数值排序。NULL值排在non-NULL的SET值前面。
+
+SUM\(\)或AVG\(\)函数期待一个数值参数并把参数转型为数值如果必须的话。对于SET值，cast操作可以把set值用于数字。
 
 
 
