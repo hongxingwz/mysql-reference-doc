@@ -8,6 +8,7 @@
 * [控制语句](kong-zhi-yu-ju.md)
 * [外键约束](wai-jian-yue-shu.md)
 * [Insert](insert.md)
+* [Show语句](Show-yu-ju.md)
 * [总：取得前一次MYSQL操作影响的记录行数](qu-de-qian-yi-ci-mysql-cao-zuo-ying-xiang-de-ji-lu-xing-shu.md)
 * [总：联合主键](zong-ff1a-lian-he-zhu-jian.md)
 * [总: last\_insert\_id\(\)](603b3a-last-insert-id.md)
