@@ -10,8 +10,8 @@
 * [Insert](insert.md)
 * [Show语句](Show-yu-ju.md)
 * [函数](han-shu.md)
-    * [cast](cast.md)
-    * [convert](convert.md)
+  * [cast](cast.md)
+  * [convert](convert.md)
 * [总：取得前一次MYSQL操作影响的记录行数](qu-de-qian-yi-ci-mysql-cao-zuo-ying-xiang-de-ji-lu-xing-shu.md)
 * [总：联合主键](zong-ff1a-lian-he-zhu-jian.md)
 * [总: last\_insert\_id\(\)](603b3a-last-insert-id.md)
@@ -63,4 +63,5 @@
 * [\* 11.4.3 The BLOB and TEXT Types](1143-the-blob-and-text-types.md)
 * [11.4.4 The ENUM Type](1144-the-enum-type.md)
 * [11.4.5 The Set Type](1145-the-set-type.md)
+* [12.2 Type Conversion in Expression Evaluation](122-type-conversion-in-expression-evaluation.md)
 
