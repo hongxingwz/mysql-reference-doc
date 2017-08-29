@@ -98,5 +98,26 @@ SET值以数值排序。NULL值排在non-NULL的SET值前面。
 
 SUM\(\)或AVG\(\)函数期待一个数值参数并把参数转型为数值如果必须的话。对于SET值，cast操作可以把set值用于数字。
 
+通常情况下，你使用FIND\_IN\_SET\(\)或LIKE操作来搜索SET里面的值
+
+```
+mysql> SELECT * FROM tbl_name WHERE FIND_IN_SET('value', set_col) > 0;
+mysql> SELECT * FROM tbl_name WHERE set_col LIKE '%value%';
+```
+
+第一个语句查找set\_col包含value set成员。第二个也一样，但不全部一样：他查找set\_col列的任何地方包含value，即使是其他set成员的子串
+
+下面的语句也是允许的：
+
+
+```
+mysql> SELECT * FROM tbl_name WHERE set_col & 1;
+mysql> SELECT * FROM tbl_name WHERE set_col = 'va1l, val2'
+```
+第一个语句查找包含第一个set成员的行。第二个查找精确的匹配。小心的使用第二种类型。比较‘val1, val2’跟'val2, val1'相比返回不同的结果。你应该指定与列定义时相同的顺序的值。
+
+从一个列中发现所有可能的值，使用SHOW COLUMNS FROM tbl\_name LIKE set\_col 解析SET的定义并在Type列输出。
+在C api中，set的值以字符串返回。获取区别原始字符串和集合字符串，参阅27.8.5 "C API Data Structures"。
+
 
 
