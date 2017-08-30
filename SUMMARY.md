@@ -65,5 +65,7 @@
 * [11.4.5 The Set Type](1145-the-set-type.md)
 * [\* 11.6 The JSON Data Type \*](116-the-json-data-type.md)
 * [11.7 Data Type Default Values](117-data-type-default-values.md)
+* [11.9 Choosing the Right Type for a Column](119-choosing-the-right-type-for-a-column.md)
+* [12 Functions and Operators](12-han-shu-he-cao-zuo-fu.md)
 * [12.2 Type Conversion in Expression Evaluation](122-type-conversion-in-expression-evaluation.md)
 
