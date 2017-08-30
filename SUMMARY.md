@@ -63,6 +63,6 @@
 * [\* 11.4.3 The BLOB and TEXT Types](1143-the-blob-and-text-types.md)
 * [11.4.4 The ENUM Type](1144-the-enum-type.md)
 * [11.4.5 The Set Type](1145-the-set-type.md)
-* [11.6 The JSON Data Type](116-the-json-data-type.md)
+* [\* 11.6 The JSON Data Type \*](116-the-json-data-type.md)
 * [12.2 Type Conversion in Expression Evaluation](122-type-conversion-in-expression-evaluation.md)
 
