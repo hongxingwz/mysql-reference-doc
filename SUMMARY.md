@@ -64,5 +64,6 @@
 * [11.4.4 The ENUM Type](1144-the-enum-type.md)
 * [11.4.5 The Set Type](1145-the-set-type.md)
 * [\* 11.6 The JSON Data Type \*](116-the-json-data-type.md)
+* [11.7 Data Type Default Values](117-data-type-default-values.md)
 * [12.2 Type Conversion in Expression Evaluation](122-type-conversion-in-expression-evaluation.md)
 
