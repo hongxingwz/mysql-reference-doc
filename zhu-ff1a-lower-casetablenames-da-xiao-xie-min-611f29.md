@@ -42,12 +42,13 @@ Mac OS 下\(非UFS卷\)
 
 ## 参数说明\(lower\_case\_table\_names\)
 
-Unix下lowser\_case\_table\_names默认值为0. Windows下默认值是1. Mac OS X下默认值是2.  
+Unix下lowser\_case\_table\_names默认值为0. Windows下默认值是1. Mac OS X下默认值是2.
 
-|参数值|解释|  
-|---|---|  
-|0|使用CREATE TABLE 或 CREATE DATABASE语句指定的大小写字母在硬盘上保存表名和数据库名。名称比较对大小写敏感。在大小写不敏感的操作系统如Windows或Mac OS X 上我们不能将该参数设置为0，如果在大小写不敏感的文件系统上将 -- lower\_case\_table\_names强制设置为0，并且使用不同的大小写访问MyISAM表象，可能会导致索引破坏。|  
-|1|表名在硬盘上以小写保存，名称比较对大小写敏感。MySQL将所有表名转换为小写在存储和查找表上。该行为也适合数据库名和表的别名。该值为Windows的默认值|  
-|2|表名和数据库在硬盘上使用CREATE TABLE 或 CREATE DATABASE语句指定的大小写字母进行保存，但MySQL将它们转换为小写在查找表上。名称比较对大小写不敏感，即按照大小写来保存，按照小写来比较。注释：只在对大小写不敏感的文件系统上适用！InnoDB表名用小写保存|
+| 参数值 | 解释 |
+| --- | --- |
+| 0 | 使用CREATE TABLE 或 CREATE DATABASE语句指定的大小写字母在硬盘上保存表名和数据库名。名称比较对大小写敏感。在大小写不敏感的操作系统如Windows或Mac OS X 上我们不能将该参数设置为0，如果在大小写不敏感的文件系统上将 -- lower\_case\_table\_names强制设置为0，并且使用不同的大小写访问MyISAM表象，可能会导致索引破坏。 |
+| 1 | 表名在硬盘上以小写保存，名称比较对大小写敏感。MySQL将所有表名转换为小写在存储和查找表上。该行为也适合数据库名和表的别名。该值为Windows的默认值 |
+| 2 | 表名和数据库在硬盘上使用CREATE TABLE 或 CREATE DATABASE语句指定的大小写字母进行保存，但MySQL将它们转换为小写在查找表上。名称比较对大小写不敏感，即按照大小写来保存，按照小写来比较。注释：只在对大小写不敏感的文件系统上适用！InnoDB表名用小写保存 |
+
 
 

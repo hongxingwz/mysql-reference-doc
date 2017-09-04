@@ -70,4 +70,5 @@
 * [12.2 Type Conversion in Expression Evaluation](122-type-conversion-in-expression-evaluation.md)
 * [注： MySQL大小写敏感说明](zhu-ff1a-mysql-da-xiao-xie-min-gan-shuo-ming.md)
 * [注： lower\_case\_table\_names\(大小写敏感\)](zhu-ff1a-lower-casetablenames-da-xiao-xie-min-611f29.md)
+* [注：mysql事务](zhu-ff1a-mysql-shi-wu.md)
 
