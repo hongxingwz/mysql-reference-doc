@@ -68,4 +68,6 @@
 * [11.9 Choosing the Right Type for a Column](119-choosing-the-right-type-for-a-column.md)
 * [12 Functions and Operators](12-han-shu-he-cao-zuo-fu.md)
 * [12.2 Type Conversion in Expression Evaluation](122-type-conversion-in-expression-evaluation.md)
+* [注： MySQL大小写敏感说明](zhu-ff1a-mysql-da-xiao-xie-min-gan-shuo-ming.md)
+* [注： lower\_case\_table\_names\(大小写敏感\)](zhu-ff1a-lower-casetablenames-da-xiao-xie-min-611f29.md)
 
