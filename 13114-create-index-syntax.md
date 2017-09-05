@@ -15,5 +15,14 @@ CREATE INDEX 映射到 ALTER TABLE语句来创建索引。参阅Section 13.1.8 "
 * Prefix的限制以byte为单位，而CREATE TABLE, ALTER TABLE和CREATE INDEX语句在对于非二进制的字符串类型(CHAR, VARCHAR, TEXT)的前缀长度被解释为字符的数量，对于二进制字符串类型(BINARY, VARBINARY, BLOB)解释为字符的数量.当你在一个非二进制字符串使用multibyte character set指定前缀长度时要考虑到这一点
 * 对于spatial列，不可以指定前缀值，我们在稍后的章节
 
+下面的语句展示了创建一个索引使用name列的前10个字符(假设name是一个非二进制类型的字符串)
+
+
+```
+CREATE INDEX part_of_name ON customer(name(10))
+```
+
+
+
 
 
