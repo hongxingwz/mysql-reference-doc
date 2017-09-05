@@ -23,6 +23,8 @@ CREATE INDEX part_of_name ON customer(name(10))
 ```
 如果name列中通常前十个字符不同，那么此索引不会比创建全部的名字列的索引慢多少。而，使用列前缀来创建索引可以使索引变得非常小，使你可以节省许多硬盘的空间也可以提升插入操作的速度。
 
+Prefix支持的长度由存储引擎决定的。例如，对于InnoDB表来说前缀可以达到767字节，如果InnoDB表设置了innodb\_large\_prefix则最的索引长度是3072字节。对于MyISAM表，前缀的长度是1000字节。NDB存储引擎不支持前缀(参阅 21.1.6.6章， "Unsupported or Missing Features in NDB Cluster")
+
 
 
 
