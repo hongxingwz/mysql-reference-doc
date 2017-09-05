@@ -21,6 +21,7 @@ CREATE INDEX 映射到 ALTER TABLE语句来创建索引。参阅Section 13.1.8 "
 ```
 CREATE INDEX part_of_name ON customer(name(10))
 ```
+如果name列中通常前十个字符不同，那么此索引不会比创建全部的名字列的索引慢多少。而，使用列前缀来创建索引可以使索引变得非常小，使你可以节省许多硬盘的空间也可以提升插入操作的速度。
 
 
 
