@@ -25,6 +25,9 @@ CREATE INDEX part_of_name ON customer(name(10))
 
 Prefix支持的长度由存储引擎决定的。例如，对于InnoDB表来说前缀可以达到767字节，如果InnoDB表设置了innodb\_large\_prefix则最的索引长度是3072字节。对于MyISAM表，前缀的长度是1000字节。NDB存储引擎不支持前缀(参阅 21.1.6.6章， "Unsupported or Missing Features in NDB Cluster")
 
+一个UNIQUE 索引创建一个限制索引上所有的值都必须是有区别的。如果你尝试插入一个新的记录的值与已经存在的值相匹配，则会发生一个错误。对于所有的引擎，UNIQUE索引允许多个NULL值如果该列允许存储NULL值。如果你为UNIQUE index指定了前缀，前缀内的值一定要是唯一的。
+
+FULLTEXT仅支被InnoDB和MyISAM表的CHAR, VARCHAR, 和TEXT列支持。Indexing always happens over the entire column;列前缀索引不被支持如果指定了任何的前缀也地被忽略。参阅12.9 "Full-Text Search Functions"来获取更详细的操作。
 
 
 
