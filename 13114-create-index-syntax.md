@@ -29,6 +29,29 @@ Prefix支持的长度由存储引擎决定的。例如，对于InnoDB表来说�
 
 FULLTEXT仅支被InnoDB和MyISAM表的CHAR, VARCHAR, 和TEXT列支持。Indexing always happens over the entire column;列前缀索引不被支持如果指定了任何的前缀也地被忽略。参阅12.9 "Full-Text Search Functions"来获取更详细的操作。
 
+MyISAM, InnoDB, NDB和ARCHIVE存储引擎支持spatial列例如(POINT和GEOMETRY)(Section 11.5, "Extensions for Spatial Data", 描述了空间类型)然而，各在各引擎之间对空间列索引的支持确不相同。空间和非空间的索引适用于下列的规则
+Spatial索引(创建索引时使用SPATIAL INDEX)有如下的特性
+
+* 仅适用于MyISAM和InnoDB表。指定SPATIAL INDEX用于别的引擎造成一个错误
+* 索引列一要是NOT NULL
+* 列前缀是禁止的。每列的全部宽被索引
+
+nonspatial索引的特性(用INDEX, UNIQUE, PRIMARY KEY创建的)
+* 允许支持spatial列除了ARCHIVER的所有引擎
+* 列可以为NULL除非索引是primary key
+* 对于一个在non-SPATIAL索引列的spatial列除了POINT列，列前缀的长度一定要指定。(这对于BLOB列的索引有着相同的需求)。前缀的长度以byte为单位
+* 对于一个non-SPATIAL索引的类型取决于存储引擎。目前用B-tree。
+* 你仅可以在InnoDB, MyISAM，MEMORY表在一个可以允许有NULL值有列添加索引
+* 你可以在BLOB或TEXT列中添加一个索引仅在使用InnoDB或MyISAM表。
+* 当激活innodb\_stats\_persistent设置被激活时,对于InnoDB表，在这个表上创建索引后要运行ANALYZE TABLE语句。
+
+InnoDB支持第二个索引在虚拟列上。更多的信息， 参阅13.1.18.9 "Secondary Indexes and Generated Columns"
+
+index_col_name说明可以以ASC或DESC结尾。这两个关键字用以未来的扩展指定升序或降序排序，目前他们被解析但被忽略；索引的值一直以升序存储。
+
+在索引列表后，索引的选项可以被指定。一个index_option可以是下面的任何值：
+* KEY\_BLOCK\_SIZE [=] value
+对于MyISAM表，KEY\_BLOCK\_SIZE以字节为单位指定了index key块的大小。
 
 
 
