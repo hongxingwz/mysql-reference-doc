@@ -73,4 +73,5 @@
 * [注： lower\_case\_table\_names\(大小写敏感\)](zhu-ff1a-lower-casetablenames-da-xiao-xie-min-611f29.md)
 * [注：mysql事务](zhu-ff1a-mysql-shi-wu.md)
 * [注：报错信息收集](zhu-ff1a-bao-cuo-xin-xi-shou-ji.md)
+* [注：查询的一些总结](zhu-ff1a-cha-xun-de-yi-xie-zong-jie.md)
 
