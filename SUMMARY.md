@@ -80,5 +80,7 @@
 * [23.4.2 Event Scheduler Configuration](2342-event-scheduler-configuration.md)
 * [9.2 Schema Object Names](92-schema-object-names.md)
 * [9.2.1 Identifier Qualifiers](921-identifier-qualifiers.md)
+* [9.2.2 Identifier Case Sensitivity](922-identifier-case-sensitivity.md)
 * [5.1.8 Server SQL Modes](518-server-sql-modes.md)
+* 9.2.2 Identifier Case Sensitivity
 
