@@ -8,12 +8,12 @@ Identifiers are converted to Unicode internally. The my contain these characters
 
 * ASCII:\[0-9, a-z, A-Z$\_\]\(基本的拉丁, 数字0-9，美元符号，下划线\)
 * Identifiers may begin with a digit but unless quoted may not consist solely of digits
-* Database, table, and column names cannot end with space characters
+* Database, table, and column names cannot end with space characters  
   The identifier quote character is the backtick\(\`\)
 
-    mysql> SELECT * FROM `select` WHERE `select`.id > 100;
+  mysql&gt; SELECT \* FROM `select` WHERE `select`.id &gt; 100;
 
-If the ANSI\_QUOTES SQL model is enabled, it is also permissible to quote identifiers within double quotation marks:
+If the **ANSI\_QUOTES** SQL model is enabled, it is also permissible to quote identifiers within double quotation marks:
 
 ```
 mysql> CREATE TABLE "test" (col INT);
@@ -22,5 +22,26 @@ mysql> SET sql_mode='ANSI_QUOTES';
 mysql> CREATE TABLE "TEST"
 ```
 
+The **ANSI\_QUOTES **mode causes the server to interpret double-quoted strings as identifiers. Consequently, when this mode is enabled, string literals must be enclosed with single quotation marks. They cannot be enclosed within double quotation marks. The server SQL mode is controlled as described in Section 5.1.8, "Server SQL Modes".
 
+Identifier quote characters can be included within an identifier if you quote the identifier. If the character to be included within the identifier is the same as that used to quote the identifier itself, then you need to double the character. The following statement creates a table named a\`b that contains a column named c"d:
+
+    mysql> CREATE TABLE `a``b` (`c"d` INT);
+
+ In the select list of a query, a quoted column alias can be specified using identifier or string quoting characters:
+
+    mysql> select 1 as `one`, 2 as 'two';
+    +-----+-----+
+    | one | two |
+    +-----+-----+
+    |   1 |   2 |
+    +-----+-----+
+
+Elsewhere in the statement, quoted references to the alias must use identifier quoting or the reference is treated as a string literal.
+
+It is recommended that you do not use names that begin with Me or MeN, where  M and N are integers. For example, avoid using 1e as an identifier, because an expression such as 1e + 3 is ambiguous.  Depending on context, it might be interpreted as the expression 1e + 3 or as the number 1e + 3.
+
+使用MD5\(\)来创建表名时要小心，因为他们可以产生不合法或有歧义的形式\(像上面描述的那样\)
+
+A user variable cannot be used directly in an SQL statement as an identifier or as part of an identifier. See Section 9.4, "User-Defined Variables", for more information and examples of workarounds
 
