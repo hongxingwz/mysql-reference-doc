@@ -28,7 +28,7 @@ Identifier quote characters can be included within an identifier if you quote th
 
     mysql> CREATE TABLE `a``b` (`c"d` INT);
 
- In the select list of a query, a quoted column alias can be specified using identifier or string quoting characters:
+In the select list of a query, a quoted column alias can be specified using identifier or string quoting characters:
 
     mysql> select 1 as `one`, 2 as 'two';
     +-----+-----+
@@ -43,5 +43,33 @@ It is recommended that you do not use names that begin with Me or MeN, where  M 
 
 使用MD5\(\)来创建表名时要小心，因为他们可以产生不合法或有歧义的形式\(像上面描述的那样\)
 
-A user variable cannot be used directly in an SQL statement as an identifier or as part of an identifier. See Section 9.4, "User-Defined Variables", for more information and examples of workarounds
+A user variable cannot be used directly in an SQL statement as an identifier or as part of an identifier. See Section 9.4, "User-Defined Variables", for more information and examples of workarounds。
+
+Special characters in database and table names are encoded in the corresponding file system names as described in Section 9.2.3, "Mapping of Identifiers to File names". If you have databases or tables from an older version of MySQL that contain special characters and for which the underlying directory names or file names have not been updated to use the new encoding, the server displays their names with a prefix of \#mysql150\#. For information about referring to such names or converting them to the newer encoding, see that section.
+
+
+
+The following table describes the maximum length for each type of identifier.
+
+| Identifier | Maximum Length\(characters\) |
+| :--- | :--- |
+| Database | 64\(NDB storage engine: 63\) |
+| Table | 64\(NDB storage engine: 63\) |
+| Column | 64 |
+| Index | 64 |
+| Constraint | 64 |
+| Stored Program | 64 |
+| View | 64 |
+| Tablespace | 64 |
+| Server | 64 |
+| Log File Group | 64 |
+| Alias | 256\(see exception following table\) |
+| Compound Statement Label | 16 |
+| User-Defined Variable | 64 |
+
+Aliases for column names in **CREATE VIEW** statements are checked against the maximum column length of 64 characters\(not the maximum alias length of 256 characters\).
+
+Identifiers are stored using Unicode\(UTF-8\). This applies to identifiers in table definitions that are stored in **.frm** files and to identifiers stored in the grant tables in the **mysql **database. The sizes of the identifier string columns in the grant tables are measured in characters. You can use multibyte characters without reducing the number of characters permitted for values stored in these columns. As indicated earlier, the permissible Unicode characters are those in the Basic Multilingual Plane\(BMP\).Supplementary characters are not permitted.
+
+NDB Cluster imposes a maximum length of 63 characters for names of databases and tables.See Section 21.1.6.5, "Limits Associated with Database Objects in NDB Cluster".
 
