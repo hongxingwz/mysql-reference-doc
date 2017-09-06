@@ -70,10 +70,12 @@
 * [12.2 Type Conversion in Expression Evaluation](122-type-conversion-in-expression-evaluation.md)
 * 13.1 Data Defintion Statements
 * [13.1.1 ALTER DATABASE Syntax](1311-alter-database-syntax.md)
+* [13.1.12 CREATE EVENT Syntax](13112-create-event-syntax.md)
 * [13.1.14 CREATE INDEX Syntax](13114-create-index-syntax.md)
 * [注： MySQL大小写敏感说明](zhu-ff1a-mysql-da-xiao-xie-min-gan-shuo-ming.md)
 * [注： lower\_case\_table\_names\(大小写敏感\)](zhu-ff1a-lower-casetablenames-da-xiao-xie-min-611f29.md)
 * [注：mysql事务](zhu-ff1a-mysql-shi-wu.md)
 * [注：报错信息收集](zhu-ff1a-bao-cuo-xin-xi-shou-ji.md)
 * [注：查询的一些总结](zhu-ff1a-cha-xun-de-yi-xie-zong-jie.md)
+* [23.4.2 Event Scheduler Configuration](2342-event-scheduler-configuration.md)
 
