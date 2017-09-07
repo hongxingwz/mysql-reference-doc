@@ -81,6 +81,7 @@
 * [9.2 Schema Object Names](92-schema-object-names.md)
 * [9.2.1 Identifier Qualifiers](921-identifier-qualifiers.md)
 * [9.2.2 Identifier Case Sensitivity](922-identifier-case-sensitivity.md)
+* [9.2.4 Function Name Parsing and Resolution](924-function-name-parsing-and-resolution.md)
 * [5.1.8 Server SQL Modes](518-server-sql-modes.md)
 * 9.2.2 Identifier Case Sensitivity
 
