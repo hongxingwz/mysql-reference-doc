@@ -114,8 +114,20 @@ CREATE TABLE `count` (i INT);
 ```
 
 ## Function Name Resolution
+The following rules describe how the server resolves references to function names for function creation and invocation:
+* Built-in functions and user-defined functions
+ An error occurs if you try to create UDF with the same as a built-in function.
 
+* Built-in functions and stored functions
+It is possible to create a stored function with the same name as a built-in function, but to invoke the stored function it is necessary to qualify it with a schema name. For example, if you create a stored function named **PI**  in the **test** schema, invoke it as **test.PI()** because the server resolves **PI()**  without a qualifier as a reference to the built-in function. The server generates a warning if the stored function name collides with a built-in function name. The warning can be displayed with **SHOW WARNINGS**.
 
+* User-defined functions and stored functions
+User-defined functions and stored functions share the same namespace, so you cannot create a UDF and a stored with the same name.
+
+The preceding function name resolution rules have implications for upgrading to versions of MySQL that implement new built-in functions:
+* If you have already created a user-defined function with a  given name and upgrade MySQL to a version that implements a new built-in function with the same name, the UDF becomes inaccessible. To correct different nonconflicint name. Then modify any affected code to use the new name.
+
+* If a new version of MySQL implements a built-int function with the same name as an existing stored function, you have two choices:Rename the stored function to use a nonconflicting name, or change calls to the function so that they use a schema qualifier(that is, use schema\_name.func\_name() syntax). In either case, modify any affected code accordingly. 
 
 
 
