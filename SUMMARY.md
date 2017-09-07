@@ -87,4 +87,5 @@
 * [5.1.8 Server SQL Modes](518-server-sql-modes.md)
 * 9.2.2 Identifier Case Sensitivity
 * [9.6 Comment Syntax](96-comment-syntax.md)
+* [1.8.2.4 '--' as the Start of a Comment](1824-as-the-start-of-a-comment.md)
 
