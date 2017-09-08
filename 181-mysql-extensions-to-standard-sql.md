@@ -73,7 +73,7 @@ CREATE TABLE t1(a INT, KEY(a)) /*!50110 KEY_BLOCK_SIZE=1024 */
   * **CONCAT\(\)** or **CHAR\(\) **with one argument or more than two arguments.\(In MySQL Server, these functions can take a variable number of arguments.\)
   * The BIT\_COUNT(), CASE, ELT(), FROM_DAYS(), FROMAT(), IF(), PASSWORD(), ENCRYPT(), MD5(), ENCODE(), DECODE(), PERIOD\_ADD(), PERIOD\_DIFF(), TO\_DAYS(), and WEEKDAY() functions.
   * Use of TRIM() to trim substrings. Standard SQL supports removal of single characters only.
-  * The GROUP BY functions STD(), BIT
+  * The GROUP BY functions STD(), BIT\_OR(), BIT\_AND(), BIT\_XOR(), and GROUP\_CONCAT(). See Section 12.19, "Aggregate(GROUP BY) Functions".
 
 
 
