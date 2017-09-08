@@ -94,4 +94,5 @@
 * [1.8.1 MySQL Extensions to Standard SQL](181-mysql-extensions-to-standard-sql.md)
 * [1.8.2 MySQL Differences from Standard SQL](182-mysql-differences-from-standard-sql.md)
 * [1.8.2.2 UPDATE Differences](1822-update-differences.md)
+* [1.8.2.3 Foreign Key Differences](1823-foreign-key-differences.md)
 
