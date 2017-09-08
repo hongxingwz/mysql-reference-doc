@@ -91,6 +91,7 @@
 * [1.8.2.1 SELECT INTO TABLE Differences](1821-select-into-table-differences.md)
 * [13.2.9.1 SELECT ... INTO Syntax](13291-select-into-syntax.md)
 * [13.1.18.5  CREATE TABLE ... SELECT Syntax](131185-create-table-select-syntax.md)
-* [1.8.2.2 UPDATE Differences](1822-update-differences.md)
 * [1.8.1 MySQL Extensions to Standard SQL](181-mysql-extensions-to-standard-sql.md)
+* [1.8.2 MySQL Differences from Standard SQL](182-mysql-differences-from-standard-sql.md)
+* [1.8.2.2 UPDATE Differences](1822-update-differences.md)
 
