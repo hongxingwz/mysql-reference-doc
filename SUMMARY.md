@@ -99,4 +99,6 @@
 * [13.6.1 BEGIN ... END Compound-Statement Syntax](1361-begin-end-compound-statement-syntax.md)
 * [13.6.2 Statement Label Syntax](1362-statement-label-syntax.md)
 * [13.6.3 DECLARE Syntax](1363-declare-syntax.md)
+* [13.6.4 Variables in Stored Programs](1364-variables-in-stored-programs.md)
+* [13.6.4.1 Local Variable DECLARE Syntax](13641-local-variable-declare-syntax.md)
 
