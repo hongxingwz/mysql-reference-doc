@@ -101,4 +101,5 @@
 * [13.6.3 DECLARE Syntax](1363-declare-syntax.md)
 * [13.6.4 Variables in Stored Programs](1364-variables-in-stored-programs.md)
 * [13.6.4.1 Local Variable DECLARE Syntax](13641-local-variable-declare-syntax.md)
+* [13.6.4.2 Local Variable Scope and Resolution](13642-local-variable-scope-and-resolution.md)
 
