@@ -95,4 +95,7 @@
 * [1.8.2 MySQL Differences from Standard SQL](182-mysql-differences-from-standard-sql.md)
 * [1.8.2.2 UPDATE Differences](1822-update-differences.md)
 * [1.8.2.3 Foreign Key Differences](1823-foreign-key-differences.md)
+* [13.6 Compound-Statement Syntax](136-compound-statement-syntax.md)
+* [13.6.1 BEGIN ... END Compound-Statement Syntax](1361-begin-end-compound-statement-syntax.md)
+* [13.6.2 Statement Label Syntax](1362-statement-label-syntax.md)
 
