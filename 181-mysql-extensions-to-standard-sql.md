@@ -46,19 +46,34 @@ CREATE TABLE t1(a INT, KEY(a)) /*!50110 KEY_BLOCK_SIZE=1024 */
   * The **LOW\_PRIORITY** clause of the **INSERT**, **REPLACE**, **DELETE**, and **UPDATE** statements
   * Use of **INTO OUTFILE** or **INTO DUMPFILE** in **SELECT** statements. See Section 13.2.9, "SELECT Syntax".
   * Options such as **STARIGHT\_JOIN** or **SQL\_SMALL\_RESULT** in **SELECT** statements.
-  * You don't need to name all selected columns in the **GROUP BY** clause. This gives better performance for some very specific, but quite normal queries. See Section 12.19, "**Aggregate (GROUP BY) Functions**"
+  * You don't need to name all selected columns in the **GROUP BY** clause. This gives better performance for some very specific, but quite normal queries. See Section 12.19, "**Aggregate \(GROUP BY\) Functions**"
   * You can specify **ASC** and **DESC** with **GROUP BY**, not just with **ORDER BY**.
   * The ability to set variables in statement with the **:=** assignment operator. See Section 9.4, "User-Defined Variables"
 * Data types
+
   * The **MEDIUMINT**, **SET**, and **ENUM** data types, and the various **BLOB** and **TEXT** data types.
   * The **AUTO\_INCREMENT**, **BINARY**, **NULL**, **UNSIGNED**, and **ZEROFILL** data type attributes.
-  
+
 * Functions and operators
+
   * To make it easier for users who migrate from other SQL environments, MySQL Server supports aliases for many functions. For example, all string functions support both standard SQL syntax and ODBC syntax.
-  * MySQL Server understands the **||** and **&&** operators to mean logical **OR** and **AND**, as in the C programming language. In MySQL Server, **||** and **OR** are synonyms, as are **&&** and **AND**. Because of this nice syntax, MySQL Server doesn't support the standard SQL **||** operator for string concatenation; use **CONCAT()** instead. Because **CONCAT()** takes any number of arguments, it is easy to convert use of the **||** operator to MySQL Server.
-  * Use of **COUNT(DISTINCT value\_list)** where **value\_list** has more than one element.
-  * String comparisons are case insensitive by default, with sort ordering determined by the collation of the current character set, which is **latin1**(cp1252 West European) by default. To perform case-sensitive comparisons instead, you should declare your columns with the **BINARY** attribute or use the **BINARY** cast, which causes comparisons to be done using the underlying character code values rather than a lexical ordering.
-  * The **%** operator is a synonym for MOD(). That is, **N % M** is equivalent to **MOD(N, M)**. **%** is supported for C programmers and for compatibility with **PostgreSQL**.
-  * 
+  * MySQL Server understands the **\|\|** and **&&** operators to mean logical **OR** and **AND**, as in the C programming language. In MySQL Server, **\|\|** and **OR** are synonyms, as are **&&** and **AND**. Because of this nice syntax, MySQL Server doesn't support the standard SQL **\|\|** operator for string concatenation; use **CONCAT\(\)** instead. Because **CONCAT\(\)** takes any number of arguments, it is easy to convert use of the **\|\|** operator to MySQL Server.
+  * Use of **COUNT\(DISTINCT value\_list\)** where **value\_list** has more than one element.
+  * String comparisons are case insensitive by default, with sort ordering determined by the collation of the current character set, which is **latin1**\(cp1252 West European\) by default. To perform case-sensitive comparisons instead, you should declare your columns with the **BINARY** attribute or use the **BINARY** cast, which causes comparisons to be done using the underlying character code values rather than a lexical ordering.
+  * The **%** operator is a synonym for MOD\(\). That is, **N % M** is equivalent to **MOD\(N, M\)**. **%** is supported for C programmers and for compatibility with **PostgreSQL**.
+  * The **=, &lt;&gt;, &lt;=, &lt;, &gt;=, &gt;, &lt;&lt;, &gt;&gt;, &lt;=&gt;, AND, OR, **or** LIKE** operators may be used in expressions in the output column list\(to be left of the **FROM**\) in **SELECT **statements. For example:
+
+  ```
+   mysql> SELECT col1=1 AND col2=2 FROM my_table;
+  ```
+
+  * The **LAST\_INSERT\_ID\(\)** functions returns the most recent **AUTO\_INCREMENT** value. See Section 12.14, "Information Functions".
+  * LIKE is permitted on numeric values.
+  * The **REGEXP** and **NOT REGEXP **extended regular expression operators.
+  * **CONCAT\(\)** or **CHAR\(\) **with one argument or more than two arguments.\(In MySQL Server, these functions can take a variable number of arguments.\)
+  * The BIT\_COUNT(), CASE, ELT(), FROM_DAYS(), FROMAT(), IF(), PASSWORD(), ENCRYPT(), MD5(), ENCODE(), DECODE(), PERIOD\_ADD(), PERIOD\_DIFF(), TO\_DAYS(), and WEEKDAY() functions.
+  * Use of TRIM() to trim substrings. Standard SQL supports removal of single characters only.
+  * The GROUP BY functions STD(), 
+
 
 
