@@ -117,8 +117,10 @@
 * [13.6.6.4 Cursor OPEN Syntax](13664-cursor-open-syntax.md)
 * [13.6.5.1 CASE Syntax](13651-case-syntax.md)
 * [13.1.16 CREATE PROCEDURE and CREATE FUNCTION Syntax](13116-create-procedure-and-create-function-syntax.md)
+* [13.1.31 DROP TRIGGER Syntax](13131-drop-trigger-syntax.md)
 * [23.1 Defining Stored Programs](231-defining-stored-programs.md)
 * [13.6.5.7 RETURN Syntax](13657-return-syntax.md)
 * [13.6.7 Condition Handling](1367-condition-handling.md)
-
+* [23.3 Using Triggers](233-using-triggers.md)
+* [23.3.1 Trigger Syntax and Examples](2331-trigger-syntax-and-examples.md)
 
