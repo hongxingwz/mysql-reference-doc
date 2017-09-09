@@ -102,6 +102,8 @@
 * [13.6.4 Variables in Stored Programs](1364-variables-in-stored-programs.md)
 * [13.6.4.1 Local Variable DECLARE Syntax](13641-local-variable-declare-syntax.md)
 * [13.6.4.2 Local Variable Scope and Resolution](13642-local-variable-scope-and-resolution.md)
+* [13.6.5 Flow Control Statements](1365-flow-control-statements.md)
+* [13.6.5.1 CASE Syntax](13651-case-syntax.md)
 * [13.1.16 CREATE PROCEDURE and CREATE FUNCTION Syntax](13116-create-procedure-and-create-function-syntax.md)
 * [23.1 Defining Stored Programs](231-defining-stored-programs.md)
 
