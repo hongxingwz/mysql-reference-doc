@@ -107,7 +107,10 @@
 * [13.6.5.3 ITERATE Syntax](13653-iterate-syntax.md)
 * [13.6.5.4 LEAVE Syntax](13654-leave-syntax.md)
 * [13.6.5.5 LOOP Syntax](13655-loop-syntax.md)
+* [13.6.5.6 REPEAT Syntax](13656-repeat-syntax.md)
+* [13.6.5.8 WHILE Syntax](13658-while-syntax.md)
 * [13.6.5.1 CASE Syntax](13651-case-syntax.md)
 * [13.1.16 CREATE PROCEDURE and CREATE FUNCTION Syntax](13116-create-procedure-and-create-function-syntax.md)
 * [23.1 Defining Stored Programs](231-defining-stored-programs.md)
+* [13.6.5.7 RETURN Syntax](13657-return-syntax.md)
 
