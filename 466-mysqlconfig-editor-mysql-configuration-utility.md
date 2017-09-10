@@ -1,2 +1,4 @@
 # 4.6.6 mysql\_config\_editor - MySQL Configuration Utility
-The mysql\_config\_editor utility enables you do store authentication credentials in an encrypted login path file named **.mylogin.cnf**.
+The mysql\_config\_editor utility enables you do store authentication credentials in an encrypted login path file named **.mylogin.cnf**.The file location is the **%APPDATA%\MySQL** directory on Windows and the current user's home directory on non-Windows systems. The file can be read later by MySQL client programs to obtain authentication credentials for connecting to MySQL Server.
+
+The unencrypted format of the **.mylogin.cnf** login path file consists of option groups, similar to other option files. Each option group is **.mylogin.cnf** is called a "login path," which is a group that permits only certains options:host, user, password, port and socket.Think of a login path option group as a set of options that specify which MySQL server to connect to and which account to authenticate as. Here is an unencrypted example:
