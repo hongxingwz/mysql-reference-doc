@@ -125,4 +125,8 @@
 * [23.3.1 Trigger Syntax and Examples](2331-trigger-syntax-and-examples.md)
 * [23.3.2 Trigger Metadata](2332-trigger-metadata.md)
 * [\* 13.1.21 CREATE VIEW Syntax](13121-create-view-syntax.md)
+* [6.1 General Security Issues](61-general-security-issues.md)
+* [6.1.1 Security Guidelines](611-security-guidelines.md)
+* [2.10 Postinstallation Setup and Testing](210-postinstallation-setup-and-testing.md)
+* [6.2 The MySQL Access Privilege System](62-the-mysql-access-privilege-system.md)
 
