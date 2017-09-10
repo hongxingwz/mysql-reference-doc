@@ -131,5 +131,5 @@
 * [6.2 The MySQL Access Privilege System](62-the-mysql-access-privilege-system.md)
 * [6.1.2.1 End-User Guidelines for Password Security](6121-end-user-guidelines-for-password-security.md)
 * [4.6.6 mysql\_config\_editor - MySQL Configuration Utility](466-mysqlconfig-editor-mysql-configuration-utility.md)
-* [4.2.6 Using Option Files](426-using-option-files.md)
+* [\* 4.2.6 Using Option Files](426-using-option-files.md)
 
