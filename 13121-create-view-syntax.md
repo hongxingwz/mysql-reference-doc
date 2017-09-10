@@ -109,6 +109,39 @@ If the **DEFINER** clause is present, these rules determine the valid **DEFINER*
 
 For more information about view security, see Section 23.6, "Access Control for Stored Programs and Views"
 
+Within a view definition, **CURRENT\_USER** returns the view's **DEFINER** value by default. For views defined with the **SQL SECURITY INVOKER** characteristic, CURRENT\_USER return the account for the view's invoker. For information about user auditing within views, see Section 6.3.12, "SQL-Based MySQL Account Activity Auditing".
+
+Within a stored routine that is defined with the **SQL SECURITY DEFINER** characteristic, **CURRENT\_USER** returns the routine's **DEFINER** value. This also affects a view defined within such a routine, if the view definition contains a **DEFINER** value of **CURRENT\_USER**.
+
+MySQL checks view privileges like this:
+* At view definition time, the view creator must have the privileges needed to use the top-level objects accessed by the view. For example, if the view definition refers to table columns, the creator must have some privilege for each column in the select list of the definition, and the **SELECT** privilege for each column used elsewhere in the definition. If the definition refers to a stored function, only the privileges needed to invoke the function can be checked. The privileges required at function invocation time can be checked only as it executes: For different invocations, different execution paths within the function might be taken.
+
+* The user who references a view must have appropriate privileges to access it(SELECT to select from it, INSERT to insert into it, and so forth.)
+
+* When a view has been referenced, privileges for objects accessed by the view are checked against the privileges held by the view **DEFINER** account or invoker, depending on whether the S**QL SECURITY** characteristic is **DEFINER** or **INVOKER**, respectively.
+
+* If reference to a view causes execution of a stored function, privilege checking for statements executed within the function depend on whether the function **SQL SECURITY**  characteristic is **DEFINER** or **INVOKER**. If the security characteristic is **DEFINER**, the function runs with the privileges of the **DEFINER** account. If the characteristic is **INVOKER**, the function runs with the privileges determined by the view's **SQL SECURITY** characteristic.
+
+Example: A view might depend on a stored function, and that function might invoke other stored routines. For example, the following view invokes a stored function **f()**
+
+
+
+```
+CREATE VIEW v AS SELECT * FROM t WHERE t.id = f(t.name);
+```
+Suppose that **f()** contains a statement such as this:
+
+
+```
+IF name IS NULL then
+    CALL p1();
+ELSE 
+    CALL p2();
+END IF;
+```
+The privileges required for executing statements within **f()** need to be checked when **f()** executes. This might mean that privileges are needed for **p1()** or **p2()**, depending on the execution path within f(). Those privileges must be checked at runtime, and the user who must possess the privileges is determined by the **SQL SECURITY** values of the view v and the function f()
+
+
 
 
 

@@ -124,5 +124,5 @@
 * [23.3 Using Triggers](233-using-triggers.md)
 * [23.3.1 Trigger Syntax and Examples](2331-trigger-syntax-and-examples.md)
 * [23.3.2 Trigger Metadata](2332-trigger-metadata.md)
-* [13.1.21 CREATE VIEW Syntax](13121-create-view-syntax.md)
+* [\* 13.1.21 CREATE VIEW Syntax](13121-create-view-syntax.md)
 
