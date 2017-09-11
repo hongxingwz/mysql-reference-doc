@@ -28,11 +28,13 @@ DATE\_FORMAT\(date\)
 
 经常用的 DATE\_FORMAT\(now\(\), "%Y-%m-%d %H:%i:s"
 
-timestampdiff
+timestampdiff()
 
-TIMESTAMPADD
+TIMESTAMPADD()
 
-date\_add
+DATE\_ADD()
+
+DATEDIFF()
 
 # 天坑：
 
