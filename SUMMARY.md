@@ -52,10 +52,8 @@
 * [9.2.4 Function Name Parsing and Resolution](924-function-name-parsing-and-resolution.md)
 * [9.3 Keywords and Reserved Words](93-keywords-and-reserved-words.md)
 * [9.4 User-Defined Variable](94-user-defined-variable.md)
-* [5.1.8 Server SQL Modes](518-server-sql-modes.md)
-* 9.2.2 Identifier Case Sensitivity
 * [9.6 Comment Syntax](96-comment-syntax.md)
-
+* [5.1.8 Server SQL Modes](518-server-sql-modes.md)
 * [11.2 Numberic Types](112-numberic-types.md)
 * [11.2.1 Integer Types\(Exact Value\) - INTEGER, INT, SMALLINT, TINYINT, MEDIUMINT, BIGINT](1121-integer-typesexact-value-integer-int-smallint-tinyint-mediumint-bigint.md)
 * [11.2.2 Fixed-Point Types\(Exact Value\) - DECIMAL, NUMERIC](1111-fixed-point-typesexact-value-decimal-numeric.md)
