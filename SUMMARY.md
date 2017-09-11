@@ -46,6 +46,16 @@
 * 3.7 Using MySQL with Apache
 * [9.1 Literal Values](91-literal-values.md)
 * [9.1.1 String Literals](911-string-literals.md)
+* [9.2 Schema Object Names](92-schema-object-names.md)
+* [9.2.1 Identifier Qualifiers](921-identifier-qualifiers.md)
+* [9.2.2 Identifier Case Sensitivity](922-identifier-case-sensitivity.md)
+* [9.2.4 Function Name Parsing and Resolution](924-function-name-parsing-and-resolution.md)
+* [9.3 Keywords and Reserved Words](93-keywords-and-reserved-words.md)
+* [9.4 User-Defined Variable](94-user-defined-variable.md)
+* [5.1.8 Server SQL Modes](518-server-sql-modes.md)
+* 9.2.2 Identifier Case Sensitivity
+* [9.6 Comment Syntax](96-comment-syntax.md)
+
 * [11.2 Numberic Types](112-numberic-types.md)
 * [11.2.1 Integer Types\(Exact Value\) - INTEGER, INT, SMALLINT, TINYINT, MEDIUMINT, BIGINT](1121-integer-typesexact-value-integer-int-smallint-tinyint-mediumint-bigint.md)
 * [11.2.2 Fixed-Point Types\(Exact Value\) - DECIMAL, NUMERIC](1111-fixed-point-typesexact-value-decimal-numeric.md)
@@ -78,15 +88,6 @@
 * [注：报错信息收集](zhu-ff1a-bao-cuo-xin-xi-shou-ji.md)
 * [注：查询的一些总结](zhu-ff1a-cha-xun-de-yi-xie-zong-jie.md)
 * [23.4.2 Event Scheduler Configuration](2342-event-scheduler-configuration.md)
-* [9.2 Schema Object Names](92-schema-object-names.md)
-* [9.2.1 Identifier Qualifiers](921-identifier-qualifiers.md)
-* [9.2.2 Identifier Case Sensitivity](922-identifier-case-sensitivity.md)
-* [9.2.4 Function Name Parsing and Resolution](924-function-name-parsing-and-resolution.md)
-* [9.3 Keywords and Reserved Words](93-keywords-and-reserved-words.md)
-* [9.4 User-Defined Variable](94-user-defined-variable.md)
-* [5.1.8 Server SQL Modes](518-server-sql-modes.md)
-* 9.2.2 Identifier Case Sensitivity
-* [9.6 Comment Syntax](96-comment-syntax.md)
 * [1.8.2.4 '--' as the Start of a Comment](1824-as-the-start-of-a-comment.md)
 * [1.8.2.1 SELECT INTO TABLE Differences](1821-select-into-table-differences.md)
 * [13.2.9.1 SELECT ... INTO Syntax](13291-select-into-syntax.md)
