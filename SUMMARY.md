@@ -131,4 +131,6 @@
 * [6.1.2.1 End-User Guidelines for Password Security](6121-end-user-guidelines-for-password-security.md)
 * [4.6.6 mysql\_config\_editor - MySQL Configuration Utility](466-mysqlconfig-editor-mysql-configuration-utility.md)
 * [\* 4.2.6 Using Option Files](426-using-option-files.md)
+* [13.5 Prepared SQL Statement Syntax](135-prepared-sql-statement-syntax.md)
+* [13.7.4.1 SET Syntax for Variable Assignment](13741-set-syntax-for-variable-assignment.md)
 
