@@ -137,4 +137,5 @@
 * [13.7.4.3 SET NAMES Syntax](13743-set-names-syntax.md)
 * [13.2.9.3 UNION Syntax](13293-union-syntax.md)
 * [13.2.10 SubQuery Syntax](13210-subquery-syntax.md)
+* [13.2.10.1 The Subquery as Scalar Operand](132101-the-subquery-as-scalar-operand.md)
 
