@@ -133,4 +133,6 @@
 * [\* 4.2.6 Using Option Files](426-using-option-files.md)
 * [13.5 Prepared SQL Statement Syntax](135-prepared-sql-statement-syntax.md)
 * [13.7.4.1 SET Syntax for Variable Assignment](13741-set-syntax-for-variable-assignment.md)
+* [13.7.4.2 SET CHARACTER SET Syntax](13742-set-character-set-syntax.md)
+* [13.7.4.3 SET NAMES Syntax](13743-set-names-syntax.md)
 
