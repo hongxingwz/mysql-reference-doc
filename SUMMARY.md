@@ -138,4 +138,10 @@
 * [13.2.9.3 UNION Syntax](13293-union-syntax.md)
 * [13.2.10 SubQuery Syntax](13210-subquery-syntax.md)
 * [13.2.10.1 The Subquery as Scalar Operand](132101-the-subquery-as-scalar-operand.md)
+* [13.2.10.2 Comparisons Using Subqueries](132102-comparisons-using-subqueries.md)
+* [13.2.10.3 Subqueries with ANY, IN, or SOME](132103-subqueries-with-any-in-or-some.md)
+* [13.2.10.4 Subqueries with ALL](132104-subqueries-with-all.md)
+* [13.2.10.5 Row Subqueries](132105-row-subqueries.md)
+* [13.3.2 Statements That Cannot Be Rolled Back](1332-statements-that-cannot-be-rolled-back.md)
+* [13.3.5 LOCK TABLES and UNLOCK TABLES Syntax](1335-lock-tables-and-unlock-tables-syntax.md)
 
