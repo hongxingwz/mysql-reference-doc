@@ -135,4 +135,6 @@
 * [13.7.4.1 SET Syntax for Variable Assignment](13741-set-syntax-for-variable-assignment.md)
 * [13.7.4.2 SET CHARACTER SET Syntax](13742-set-character-set-syntax.md)
 * [13.7.4.3 SET NAMES Syntax](13743-set-names-syntax.md)
+* [13.2.9.3 UNION Syntax](13293-union-syntax.md)
+* [13.2.10 SubQuery Syntax](13210-subquery-syntax.md)
 
