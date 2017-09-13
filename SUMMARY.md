@@ -154,4 +154,7 @@
 * [ROW\_COUNT\(\)](rowcount.md)
 * [USER\(\)](user.md)
 * [CURRENT\_USER, CURRENT\_USER\(\)](currentuser-currentuser.md)
+* [13.7.1.2 CREATE USER Syntax](13712-create-user-syntax.md)
+* [6.2.1 Privileges Provided by MySQL](621-privileges-provided-by-mysql.md)
+* [6.2.3 Specifying Account Names](623-specifying-account-names.md)
 
