@@ -152,4 +152,6 @@
 * [12.14 Information Functions](1214-information-functions.md)
 * [DATABASE\(\)](database.md)
 * [ROW\_COUNT\(\)](rowcount.md)
+* [USER\(\)](user.md)
+* [CURRENT\_USER, CURRENT\_USER\(\)](currentuser-currentuser.md)
 
