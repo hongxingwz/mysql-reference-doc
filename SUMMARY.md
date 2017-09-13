@@ -116,7 +116,7 @@
 * [13.6.5.1 CASE Syntax](13651-case-syntax.md)
 * [13.1.16 CREATE PROCEDURE and CREATE FUNCTION Syntax](13116-create-procedure-and-create-function-syntax.md)
 * [13.1.31 DROP TRIGGER Syntax](13131-drop-trigger-syntax.md)
-* [13.1.33 RENAME TABLE Syntax]
+* [13.1.33 RENAME TABLE Syntax](13133-rename-table-syntax.md)
 * [23.1 Defining Stored Programs](231-defining-stored-programs.md)
 * [13.6.5.7 RETURN Syntax](13657-return-syntax.md)
 * [13.6.7 Condition Handling](1367-condition-handling.md)
