@@ -150,4 +150,6 @@
 * [13.2 Data Manipulation Statements](132-data-manipulation-statements.md)
 * [13.2.1 CALL Syntax](1321-call-syntax.md)
 * [12.14 Information Functions](1214-information-functions.md)
+* [DATABASE\(\)](database.md)
+* [ROW\_COUNT\(\)](rowcount.md)
 
