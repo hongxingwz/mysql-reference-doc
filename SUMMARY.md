@@ -144,6 +144,6 @@
 * [13.3.2 Statements That Cannot Be Rolled Back](1332-statements-that-cannot-be-rolled-back.md)
 * [13.3.5 LOCK TABLES and UNLOCK TABLES Syntax](1335-lock-tables-and-unlock-tables-syntax.md)
 * [注：查询的一些总结](zhu-ff1a-cha-xun-de-yi-xie-zong-jie.md)
-* [185. Department Top Three Salaries\(LeetCode\)](sdf.md)
-* [aa](aa.md)
+* [185. Department Top Three Salaries\(LeetCode\)](department-top-three-salaries.md)
+* [196. Delete Duplicate Emails\(LeetCode\)](aa.md)
 
