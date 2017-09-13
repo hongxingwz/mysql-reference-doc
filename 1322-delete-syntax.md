@@ -31,6 +31,61 @@ To ensure that a give DELETE statement does not take too mush time, the MySQL-sp
 ## Auto-Increment Columns
 If you delete the row containing the maximum value for an **AUTO\_INCREMENT** column, the value is not reused for a MyISAM or InnoDB table. If you delete all rows in the table with `DELETE FROM tbl_name`(without a **WHERE** clause) in **autocommit** mode, the sequence starts over for all storage engines except **InnoDB** and **MyISAM**. There are some exceptions to this behavior for **InnoDB** tables, as discussed in Section 14.8.1.5, "AUTO_INCREMENT Handling in InnoDB".
 
+For MyISAM tables, you can specify an **AUTO\_INCREMENT** secondary column in a multiple-column key. In this case, reuse of values deleted from the top of the sequence occurs even for MyISAM tables. See Section 3.6.9, "Using AUTO_INCREMENT"
+
+## Modifiers
+The **DELETE** statement supports the following modifers:
+* If you specify **LOW_PRIORITY**, the server delays execution of the DELETE until no other clients are reading from the table. This affects only storage engines that use only table-level locking(such as MyISAM, MEMORY, and MERGE).
+* For MyISAM tables, if you use the QUICK modifier, the storage engine does not merger index leaves during delete, which may speed up some kinds of delete operations.
+
+* The **IGNORE** modifier causes MySQL to Ignore errors during the process of deleting rows.(Errors encountered during the parsing stage are processed in the usual manner.) Errors that are ignored due the use of **IGNORE** are returned as warnings. For more information, see Comparison of the IGNORE Keyword and Strict SQL Mode.
+
+## Order of Deletion
+If the **DELETE** statement includes an **ORDER BY** clause, rows are deleted in the order specified by the clause. This is useful primarily in conjunction with **LIMIT**. For example, the following statement finds rows matching the WHERE clause, sorts them by **timestamp\_column**, and deletes the first (oldest) one:
+
+
+```
+DELETE FROM somelog WHERE user = 'jcole'
+ORDER BY timestamp\_column LIMIT 1;
+```
+**ORDER BY** also helps to delete rows in an order required to avoid referential integrity violations.
+
+**InnoDB Tables**
+If you are deleting many rows from a large table, you may exceed the lock table size for an **InnoDB** table. To avoid this problem, or simply to minimize the time that the table remains locked, the following strategy(which dose not use DELETE at all) might be helpful:
+
+1. Select the rows not to be deleted into an empty table that has the same structure as the original table:
+
+
+```
+INSERT INTO t\_copy SELECT * FROM t WHERE ...;
+```
+
+2. Use **RENAME TABLE** to atomically move the original table out of the way and rename the copy to the original name:
+
+
+```
+RENAME TABLE t TO t\_old, t\_copy TO t;
+```
+
+3. Drop the original table:
+
+
+```
+DROP TABLE t\_old;
+```
+
+No other sessions can access the tables involved while **RENAME TABLE** executes, so the rename operation is not subject to concurrency problems. See Section 13.1.33 "RENAME TABLE Syntax".
+
+
+## Multi-Table Deletes
+You can specify multiple tables in a **DELETE** statement to delete rows from one or more tables depending one the condition if the **WHERE** clause. You cannot use **ORDER BY** or **LIMIT** in a multiple-table **DELETE**.The **table\_references** clause lists the tables involved in the join, as described in Section 13.2.9.2, "JOIN Syntax".
+
+For the first multiple-table syntax, only  matching rows from the tables listed before the FROM clause are deleted. For the second multiple-table syntax, only matching rows from the tables listed in the **FROM** clause (before the **USING** clause) are deleted. The effect is that you can delete rows from many tables at the same time and have additional tables that are used only for searching:
+
+
+
+
+
 ## 总结：
 
 ### DELETE与TRUNCATE
