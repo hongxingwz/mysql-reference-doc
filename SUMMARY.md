@@ -147,6 +147,7 @@
   * [185. Department Top Three Salaries\(LeetCode\)](department-top-three-salaries.md)
   * [196. Delete Duplicate Emails\(LeetCode\)](aa.md)
   * [262. Trips and Users\(LeetCode\)](trips-and-users.md)
-
-
+* [13.2 Data Manipulation Statements](132-data-manipulation-statements.md)
+* [13.2.1 CALL Syntax](1321-call-syntax.md)
+* [12.14 Information Functions](1214-information-functions.md)
 
