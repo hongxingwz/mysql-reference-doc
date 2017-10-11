@@ -40,3 +40,10 @@ ALTER TABLE ss_accesscode drop foreign key 外键约束名称
 
 
 
+## 查看一个表的外键约束
+
+* select \* from INFORMATION\_SCHEMA.KEY\_COLUMN\_USAGE;
+* show create table hibernate4.tableName \G
+
+
+
