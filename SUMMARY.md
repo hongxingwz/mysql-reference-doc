@@ -167,4 +167,5 @@
 * [13.5.2 EXECUTE Syntax](1352-execute-syntax.md)
 * [13.5.3 DEALLOCATE PREPARE Syntax](1353-deallocate-prepare-syntax.md)
 * [13.8.4 USE Syntax](1384-use-syntax.md)
+* [MySQL的语句执行顺序](mysqlde-yu-ju-zhi-xing-shun-xu.md)
 
