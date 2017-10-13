@@ -43,7 +43,7 @@
 * [3.6.7 Search on Two Keys](367-search-on-two-keys.md)
 * [\* 3.6.8 Calculating Visits Per Day](calculating-visits-per-day.md)
 * [\* 3.6.9 使用AUTO\_INCREMENT](369-shi-yong-auto-increment.md)
-* 3.7 Using MySQL with Apache
+* [3.7 Using MySQL with Apache](37-using-mysql-with-apache.md)
 * [9.1 Literal Values](91-literal-values.md)
 * [9.1.1 String Literals](911-string-literals.md)
 * [9.2 Schema Object Names](92-schema-object-names.md)

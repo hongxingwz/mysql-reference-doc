@@ -38,11 +38,9 @@ ALTER TABLE ss_accesscode drop foreign key 外键约束名称
 * **NO ACTION: 如果子表中有匹配的记录，则不允许对交表对应候选键进行update/delete操作**
 * **RESTRICT: 同no action，都是立即检查外键约束**
 
-
-
 ## 查看一个表的外键约束
 
-* select \* from INFORMATION\_SCHEMA.KEY\_COLUMN\_USAGE;
+* select \* from INFORMATION\_SCHEMA.KEY\_COLUMN\_USAGE;
 * show create table hibernate4.tableName \G
 
 
