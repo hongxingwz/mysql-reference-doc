@@ -168,5 +168,5 @@
 * [13.5.3 DEALLOCATE PREPARE Syntax](1353-deallocate-prepare-syntax.md)
 * [13.8.4 USE Syntax](1384-use-syntax.md)
 * [总：MySQL的语句执行顺序](mysqlde-yu-ju-zhi-xing-shun-xu.md)
-* 总：MySQL数据库表示、列名、别名区分大小写的问题
+* [总：MySQL数据库表示、列名、别名区分大小写的问题](zong-ff1a-mysql-shu-ju-ku-biao-shi-3001-lie-ming-3001-bie-ming-qu-fen-da-xiao-xie-de-wen-ti.md)
 
