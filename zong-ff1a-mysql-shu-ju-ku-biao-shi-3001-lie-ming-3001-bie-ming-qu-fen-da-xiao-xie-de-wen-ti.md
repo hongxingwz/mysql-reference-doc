@@ -61,7 +61,13 @@ Mysql默认查询是不区分大小写的，如果需要区分，必须在建表
    );
 ```
 
-或在SQL语句中实现`SELECT * FROM TABLE NAME WHERE BINARY name='Clip'`
+或
+在SQL语句中实现`SELECT * FROM TABLE NAME WHERE BINARY name='Clip'`
+
+设置较验集
+* _bin 表示的是binary case sensitive collation, 也就是说是区分大小写
+* _cs case sensitive collation, 区分大小写
+* _ci case insensitive collcation, 不区分大小写
 
 
 
