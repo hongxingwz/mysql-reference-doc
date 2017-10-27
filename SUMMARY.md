@@ -78,7 +78,7 @@
 * [12.2 Type Conversion in Expression Evaluation](122-type-conversion-in-expression-evaluation.md)
 * [12.4 Control Flow Functions](124 Control-Flow-Functions.md)
 * [12.5 String Functions](125 String Functions.md)
-* 13.1 Data Defintion Statements
+* [13.1 Data Defintion Statements](131-data-defintion-statements.md)
 * [13.1.1 ALTER DATABASE Syntax](1311-alter-database-syntax.md)
 * [13.1.12 CREATE EVENT Syntax](13112-create-event-syntax.md)
 * [13.1.14 CREATE INDEX Syntax](13114-create-index-syntax.md)
