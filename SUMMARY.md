@@ -76,7 +76,7 @@
 * [11.9 Choosing the Right Type for a Column](119-choosing-the-right-type-for-a-column.md)
 * [12 Functions and Operators](12-han-shu-he-cao-zuo-fu.md)
 * [12.2 Type Conversion in Expression Evaluation](122-type-conversion-in-expression-evaluation.md)
-* [12.4 Control Flow Functions](124 Control-Flow-Functions)
+* [12.4 Control Flow Functions](124 Control-Flow-Functions.md)
 * 13.1 Data Defintion Statements
 * [13.1.1 ALTER DATABASE Syntax](1311-alter-database-syntax.md)
 * [13.1.12 CREATE EVENT Syntax](13112-create-event-syntax.md)
