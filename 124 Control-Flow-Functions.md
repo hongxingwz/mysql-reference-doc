@@ -41,5 +41,96 @@ mysql> SELECT CASE BINARY 'B'
     -> null 
 ```
 
+## IF(expr1, expr2, expr3)
+
+if expr1 is TRUE(expr1 <> 0 and expr1 <> NULL), IF() returns expr2. Otherwise, it returns expr3.
+
+> Note
+>
+> There is also an IF statement, which differs from the IF() function described here. See Section 13.6.5.2, "IF Syntax"
+
+If only one of expr2 or expr3 is explicitly NULL, the result type of the IF() function is the type of the non-NULL expression.
+
+The default return type of IF()(which may matter when it is stored into a temporary table) is calculated as follows:
+* If expr2 or expr3 produce a string, the result is a string.
+* If expr2 and expr3 are both strings, the result is case sensitive if either string is case sensitive.
+* If expr2 or expr3 produce a floating-point value, the result is a floating-point value.
+* If expr2 or expr3 produce an integer, the result is an integer.
+
+
+
+```
+mysql> SELECT IF(1>2, 2, 3);
+    -> 3
+
+mysql> SELECT IF(1<2, 'yes', 'no');
+    -> 'yes'
+    
+mysql> SELECT IF(STRCMP('test', 'test1'), 'no', 'yes');
+    -> 'no'
+```
+
+
+## IFNULL(expr1, expr2)
+
+if expr1 is not NULL, IFNULL() returns expr1; otherwise it returns expr2.
+
+
+
+```
+mysql> SELECT IFNULL(1,0);
+ -> 1
+mysql> SELECT IFNULL(NULL,10);
+ -> 10
+mysql> SELECT IFNULL(1/0,10);
+ -> 10
+mysql> SELECT IFNULL(1/0,'yes');
+  -> 'yes'
+```
+
+The default return type of IFNULL(expr1, expr2) is the more "general" of the two expressions, in the order STRING, REAL, or INTEGER. Consider the case of a table based on expressions or where MySQL must internally store a value returned by IFNULL() in a temporary table:
+
+
+
+
+```
+mysql> CREATE TABLE tmp SELECT IFNULL(1, 'test') AS test;
+Query OK, 1 row affected (0.03 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> desc tmp;
++-------+------------+------+-----+---------+-------+
+| Field | Type       | Null | Key | Default | Extra |
++-------+------------+------+-----+---------+-------+
+| test  | varchar(4) | NO   |     |         |       |
++-------+------------+------+-----+---------+-------+
+1 row in set (0.00 sec)
+```
+
+In this example, the type of the test column is varchar(4) (a string type).
+
+
+* NULLIF(expr1, expr2)
+Returns NULL if expr1 = expr2 is true, otherwise returns expr1. This the same as CASE WHEN expr1 = expr2 THEN NULL ELSE expr1 END.
+
+The return value has the same type as the first argument.
+
+
+
+```
+mysql> SELECT NULLIF(1,1);
+ -> NULL
+mysql> SELECT NULLIF(1,2);
+ -> 1
+```
+
+> Note 
+>
+> Mysql evaluates expr1 twice if the arguments are not equal.
+
+
+
+
+
 
 
