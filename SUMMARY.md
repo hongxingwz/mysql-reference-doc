@@ -173,4 +173,6 @@
 * [总：MySQL数据库表示、列名、别名区分大小写的问题](zong-ff1a-mysql-shu-ju-ku-biao-shi-3001-lie-ming-3001-bie-ming-qu-fen-da-xiao-xie-de-wen-ti.md)
 * [w3c: SQL UNIQUE约束](sql-uniqueyue-shu.md)
 * [w3c: SQL PRIMARY KEY约束](w3c-sql-primary-keyyue-shu.md)
+* [总：全面了解mysql中utf8和utf8mb4的区别](zong-ff1a-quan-mian-le-jie-mysql-zhong-utf8-he-utf8mb4-de-qu-bie.md)
+* [总：mysql事务](zong-ff1a-mysql-shi-wu.md)
 
