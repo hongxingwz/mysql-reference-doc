@@ -1,3 +1,39 @@
+# 字符串函数(String Functions)
+
+### CONCAT(str1, str2, ...)
+以字符串的形式返回参数连接起来的结果。可以有一个或多个参数。如果所有的参数都是非二进制的字符串，返回的结果就是非二进制的字符串。如果参数包含任何的二进制字符串，返回的结果是一个二进制字符串。数字参数会被转换成与其等价的非二进制字符串形式。
+
+**CONCAT()返回NULL如果任何参数是NULL**
+
+
+```
+mysql> SELECT CONCAT('My', 'S', 'QL');
+  -> 'MySQL'
+mysql> SELECT CONCAT('My', NULL, 'QL'); 
+  -> NULL
+mysql> SELECT CONCAT(14.3); 
+  -> '14.3'
+```
+对于用引号的字符串，连接的操作可以被把字符串放在一起的操作替换
+
+
+```
+mysql> SELECT 'My' 'S' 'QL';
+    -> 'MySQL'
+```
+
+### CONCAT_WS(separator, str1, str2, ...)
+
+CONCAT_WS()代表用分割符把字符串串联起来，是CONCAT()的的一种特殊的形式。第一个参数是剩下参数的分割符。分割符被放在要串联字符串的中间。分割符可以是一个字符串，剩下的参数也可以是字符串。如果分割符是NULL，返回的结果也是NULL
+
+```
+mysql> SELECT CONCAT_WS(',','First name','Second name','Last Name'); 
+     -> 'First name,Second name,Last Name'
+mysql> SELECT CONCAT_WS(',','First name',NULL,'Last Name');
+     -> 'First name,Last Name'
+```
+**CONCAT_WS()**不会跳过任何空字符串。然而，其会跳过任何NULL值参数
+
 
 
 
