@@ -176,4 +176,5 @@
 * [总：全面了解mysql中utf8和utf8mb4的区别](zong-ff1a-quan-mian-le-jie-mysql-zhong-utf8-he-utf8mb4-de-qu-bie.md)
 * [总：mysql事务](zong-ff1a-mysql-shi-wu.md)
 * [13.2.8 REPLACE Syntax](1328-replace-syntax.md)
+* [总：查看mysql数据库及表编码格式](zong-ff1a-cha-kan-mysql-shu-ju-ku-ji-biao-bian-ma-ge-shi.md)
 
