@@ -17,3 +17,45 @@ TIMESTAMP 和 DATETIME 列可以自动初始化和更新到当前的日期和时
 
 
 >注意： 示例中使用`DEFAULT 0`，默认情况下能可能会产生警告或错误取决于是否是严格的SQL格式或`NO_ZERO_DATE`SQL模式是否被启用了。要注意`TRADITIONAL` SQL模式包括了严格模式和`NO_ZERO_DATE`。查看Section 5.1.8, "Server SQL MODES"
+
+
+* 当同时有`DEFAULT CURRENT_TIMESTAMP`和`ON UPDATE CURRENT_TIMESTAMP`,此列使用当前的时间戳作为其默认值，当更新时自动更新成更新时间的时间戳。
+
+
+```
+mysql>  CREATE TABLE t1 (
+    ->   ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    ->    dt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    -> );
+```
+
+
+
+* 当具有`DEFAULT`语句没有`ON UPDATE CURRENT_TIMESTAMP`语句时，该列被赋予默认值，更新时不会赋予当前的时间戳的值。
+ 默认值取决于`DEFAULT`语句是否指定了`CURRENT_TIMESTAMP`或一个常量。`CURRENT_TIMESTAMP`，默认是当前的时间戳。
+ 
+
+
+```
+mysql> CREATE TABLE t1 (
+    ->   ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ->   dt DATETIME DEFAULT CURRENT_TIMESTAMP
+    -> );
+```
+
+当设置默认值为一个常量时，默认是指定的值。在这种情况下，此列不再有自动变化的值
+
+
+
+```
+CREATE TABLE t1 (
+  ts TIMESTAMP DEFAULT 0,
+  dt DATETIME DEFAULT 0
+);
+```
+
+当具有`ON UPDATE CURRENT_TIMESTAMP`语句和一个常量`DEFAULT`语句时，该更新时会设置
+
+
+
+
