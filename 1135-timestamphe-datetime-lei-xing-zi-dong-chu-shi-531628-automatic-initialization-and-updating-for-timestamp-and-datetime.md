@@ -43,7 +43,7 @@ mysql> CREATE TABLE t1 (
     -> );
 ```
 
-当设置默认值为一个常量时，默认是指定的值。在这种情况下，此列不再有自动变化的值
+* 当设置默认值为一个常量时，默认是指定的值。在这种情况下，此列不再有自动变化的值
 
 
 
@@ -54,7 +54,46 @@ CREATE TABLE t1 (
 );
 ```
 
-当具有`ON UPDATE CURRENT_TIMESTAMP`语句和一个常量`DEFAULT`语句时，该更新时会设置
+* 当具有`ON UPDATE CURRENT_TIMESTAMP`语句和一个常量`DEFAULT`语句时，该更新时会设置为当前的时间戳，且将指定的常量作为默认值。
+
+```
+CREATE TABLE t1 (
+  ts TIMESTAMP DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP,
+  dt DATETIME DEFAULT 0 ON UPDATE CURRENT_TIMESTAMP
+);
+```
+
+* 当具有`ON UPDATE CURRENT_TIMESTAMP`语句但没有`DEFAULT`语句，此列会自动更新当前的时间戳，但不将当前时间戳作为默认值。
+
+
+默认值在此情况下是类型独立的。`TIMESTAMP`有默认值`0`除非用`NULL`定义了，在这种情况下默认值是`NULL`
+
+
+
+```
+CREATE TABLE t1 (
+  ts1 TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,     -- default 0
+  ts2 TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP -- default NULL
+);
+```
+
+`DATETIME`具有的默认值是`NULL`除非用`NOT NULL`定义了，在这种情况下，默认值是0。
+
+
+
+```
+CREATE TABLE t1 (
+  dt1 DATETIME ON UPDATE CURRENT_TIMESTAMP,         -- default NULL
+  dt2 DATETIME NOT NULL ON UPDATE CURRENT_TIMESTAMP -- default 0
+);
+```
+
+
+
+
+
+
+
 
 
 
