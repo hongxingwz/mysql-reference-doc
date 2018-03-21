@@ -177,4 +177,5 @@
 * [总：mysql事务](zong-ff1a-mysql-shi-wu.md)
 * [13.2.8 REPLACE Syntax](1328-replace-syntax.md)
 * [总：查看mysql数据库及表编码格式](zong-ff1a-cha-kan-mysql-shu-ju-ku-ji-biao-bian-ma-ge-shi.md)
+* [11.3.5 TIMESTAMP和DATETIME类型自动初始化\(Automatic Initialization and Updating for TIMESTAMP and DATETIME\)](1135-timestamphe-datetime-lei-xing-zi-dong-chu-shi-531628-automatic-initialization-and-updating-for-timestamp-and-datetime.md)
 
