@@ -34,6 +34,16 @@ mysql> SELECT CONCAT_WS(',','First name',NULL,'Last Name');
 ```
 **CONCAT_WS()**不会跳过任何空字符串。然而，其会跳过任何NULL值参数
 
+**分割符为NULL,则返回NULL**
+
+```mysql
+mysql> select concat_ws(null, "a", "b",  "c");
++---------------------------------+
+| concat_ws(null, "a", "b",  "c") |
++---------------------------------+
+| NULL                            |
++---------------------------------+
+```
 
 
 
